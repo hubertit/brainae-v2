@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import AccreditationsList from '../components/AccreditationsList';
 import Icon, { faCertificate, faAward, faCheckCircle, faArrowRight } from '../components/Icon';
 
 export const metadata: Metadata = {
@@ -13,8 +13,18 @@ export const metadata: Metadata = {
   },
 };
 
+type AccreditationType = 'Accreditation' | 'Certification' | 'Partnership' | 'Membership';
+
+interface Accreditation {
+  title: string;
+  imageUrl: string;
+  description: string;
+  website: string;
+  type: AccreditationType;
+}
+
 export default function AccreditationsPage() {
-  const accreditations = [
+  const accreditations: Accreditation[] = [
     {
       title: 'International Association for Quality Assurance in Higher Education (QAHE)',
       imageUrl: 'https://brainae.org/store/1/QAHE.jpg',
@@ -337,56 +347,7 @@ export default function AccreditationsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Our Accreditations & Certifications</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {accreditations.map((accreditation, index) => (
-                <div
-                  key={index}
-                  className="bg-white border border-gray-200 p-6 hover:border-primary transition-colors"
-                >
-                  <div className="mb-4 flex items-center justify-center h-32 bg-gray-50 rounded relative">
-                    <Image
-                      src={accreditation.imageUrl}
-                      alt={accreditation.title}
-                      width={200}
-                      height={128}
-                      className="object-contain"
-                      style={{ maxHeight: '100%', maxWidth: '100%' }}
-                      unoptimized={accreditation.imageUrl.startsWith('http')}
-                    />
-                  </div>
-                  <div className="mb-3">
-                    <span className={`inline-block px-3 py-1 rounded text-xs font-semibold ${
-                      accreditation.type === 'Certification' 
-                        ? 'bg-blue-100 text-blue-800' 
-                        : accreditation.type === 'Partnership'
-                        ? 'bg-purple-100 text-purple-800'
-                        : accreditation.type === 'Membership'
-                        ? 'bg-orange-100 text-orange-800'
-                        : 'bg-green-100 text-green-800'
-                    }`}>
-                      {accreditation.type}
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3 leading-tight">
-                    {accreditation.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 mb-4 line-clamp-3">
-                    {accreditation.description}
-                  </p>
-                  {accreditation.website && accreditation.website !== '#' && (
-                    <a
-                      href={accreditation.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-primary hover:text-primary-600 font-semibold inline-flex items-center"
-                    >
-                      Learn More
-                      <Icon icon={faCheckCircle} className="ml-2" size="sm" />
-                    </a>
-                  )}
-                </div>
-              ))}
-            </div>
+            <AccreditationsList accreditations={accreditations} itemsPerPage={9} />
           </div>
         </div>
       </section>
