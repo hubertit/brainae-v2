@@ -193,7 +193,7 @@ export default function ProgramsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/admissions"
+                href="/application"
                 className="bg-white text-primary px-8 py-3 rounded hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
               >
                 Apply Now

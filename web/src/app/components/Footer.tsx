@@ -140,7 +140,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="/admissions"
+                  href="/application"
                   className="text-gray-400 hover:text-primary transition-colors inline-block"
                 >
                   Apply Now

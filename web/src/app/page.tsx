@@ -16,30 +16,50 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+      <section className="relative h-[800px] flex items-center justify-center overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: 'url(/images/hero.jpg)',
+            }}
+          />
+          <div className="absolute inset-0 bg-primary/40" />
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
               Welcome to BRAINAE University
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl md:text-2xl mb-8 text-white/95 leading-relaxed">
               Online education platform that accelerates your career and prepares you to face the future with in-demand skills
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="#programs"
-                className="bg-primary text-white px-8 py-3 rounded hover:bg-primary-600 transition-colors inline-flex items-center justify-center"
+                href="/application"
+                className="bg-white text-primary px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 inline-flex items-center justify-center font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                Apply Now
+                <Icon icon={faArrowRight} className="ml-2" />
+              </a>
+              <a
+                href="/programs"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-primary transition-all duration-300 inline-flex items-center justify-center font-semibold text-lg"
               >
                 Explore Programs
                 <Icon icon={faArrowRight} className="ml-2" />
               </a>
-              <a
-                href="/student"
-                className="border-2 border-primary text-primary px-8 py-3 rounded hover:bg-primary hover:text-white transition-colors inline-flex items-center justify-center"
-              >
-                Student Portal
-              </a>
             </div>
+          </div>
+        </div>
+        
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+          <div className="w-6 h-10 border-2 border-white rounded-full flex items-start justify-center p-2">
+            <div className="w-1 h-3 bg-white rounded-full" />
           </div>
         </div>
       </section>
@@ -192,7 +212,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/admissions"
+                href="/application"
                 className="bg-primary text-white px-8 py-3 rounded hover:bg-primary-600 transition-colors"
               >
                 Apply Now

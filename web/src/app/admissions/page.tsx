@@ -212,7 +212,7 @@ export default function AdmissionsPage() {
                 Start your application today and take the first step towards your future.
               </p>
               <a
-                href="/student"
+                href="/application"
                 className="bg-white text-primary px-8 py-3 rounded hover:bg-gray-100 transition-colors inline-flex items-center"
               >
                 Start Application
