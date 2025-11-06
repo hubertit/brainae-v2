@@ -13,12 +13,13 @@ import Icon, {
   faBookOpen,
   faDollarSign,
   faCalendar,
+  faDownload,
 } from '../../components/Icon';
 
 export default function StudentDashboard() {
   const stats = [
     { label: 'Active Courses', value: '5', icon: faBook },
-    { label: 'Assignments Due', value: '3', icon: faFileAlt },
+    { label: 'Assessments Due', value: '3', icon: faFileAlt },
     { label: 'GPA', value: '3.8', icon: faAward },
     { label: 'Credits Earned', value: '45', icon: faGraduationCap },
   ];
@@ -44,10 +45,11 @@ export default function StudentDashboard() {
     },
   ];
 
-  const upcomingEvents = [
-    { title: 'Assignment Due: BUS 101', date: 'Dec 15, 2024', type: 'assignment' },
-    { title: 'Final Exam: CS 201', date: 'Dec 18, 2024', type: 'exam' },
-    { title: 'Project Submission: ACC 301', date: 'Dec 20, 2024', type: 'project' },
+  const recentActivities = [
+    { title: 'Submitted Assignment 4', course: 'BUS 101', date: 'Dec 12, 2024', time: '2:30 PM', type: 'submission' },
+    { title: 'Accessed Course Materials', course: 'CS 201', date: 'Dec 11, 2024', time: '10:15 AM', type: 'access' },
+    { title: 'Grade Received: A', course: 'ACC 301', date: 'Dec 10, 2024', time: '4:45 PM', type: 'grade' },
+    { title: 'Downloaded Lecture Notes', course: 'BUS 101', date: 'Dec 9, 2024', time: '3:20 PM', type: 'download' },
   ];
 
   const announcements = [
@@ -63,7 +65,7 @@ export default function StudentDashboard() {
   ];
 
   const quickActions = [
-    { label: 'View Assignments', href: '/student/assignments', icon: faFileAlt },
+    { label: 'View Assessments', href: '/student/assignments', icon: faFileAlt },
     { label: 'Access E-Library', href: '/library/portal', icon: faBookOpen },
     { label: 'Financial Info', href: '/student/financial', icon: faDollarSign },
     { label: 'Academic Calendar', href: '/student/calendar', icon: faCalendar },
@@ -85,8 +87,8 @@ export default function StudentDashboard() {
             className="bg-white border border-gray-200 p-6 hover:border-primary transition-colors"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-primary/10 flex items-center justify-center">
-                <Icon icon={stat.icon} className="text-primary" size="lg" />
+              <div className="w-10 h-10 bg-gray-100 flex items-center justify-center">
+                <Icon icon={stat.icon} className="text-gray-600" size="lg" />
               </div>
             </div>
             <div className="text-3xl font-bold text-gray-900 mb-1">{stat.value}</div>
@@ -137,7 +139,7 @@ export default function StudentDashboard() {
                     </div>
                   </div>
                   <div className="flex items-center text-sm text-gray-600">
-                    <Icon icon={faClock} className="mr-2 text-primary" size="sm" />
+                    <Icon icon={faClock} className="mr-2 text-gray-500" size="sm" />
                     <span>{course.nextAssignment}</span>
                   </div>
                 </div>
@@ -146,24 +148,42 @@ export default function StudentDashboard() {
           </div>
         </div>
 
-        {/* Upcoming Events */}
+        {/* Recent Activities */}
         <div className="bg-white border border-gray-200 p-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Upcoming Events</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Recent Activities</h2>
           <div className="space-y-3">
-            {upcomingEvents.map((event, index) => (
-              <div
-                key={index}
-                className="flex items-start gap-3 p-3 hover:bg-gray-50 transition-colors border-b border-gray-100 last:border-0"
-              >
-                <div className="flex-shrink-0 w-8 h-8 bg-primary/10 flex items-center justify-center">
-                  <Icon icon={faClock} className="text-primary" size="sm" />
+            {recentActivities.map((activity, index) => {
+              const getActivityIcon = () => {
+                switch (activity.type) {
+                  case 'submission':
+                    return faFileAlt;
+                  case 'access':
+                    return faBookOpen;
+                  case 'grade':
+                    return faAward;
+                  case 'download':
+                    return faDownload;
+                  default:
+                    return faClock;
+                }
+              };
+
+              return (
+                <div
+                  key={index}
+                  className="flex items-start gap-3 p-3 hover:bg-gray-50 transition-colors border-b border-gray-100 last:border-0"
+                >
+                  <div className="flex-shrink-0 w-8 h-8 bg-gray-100 flex items-center justify-center">
+                    <Icon icon={getActivityIcon()} className="text-gray-600" size="sm" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-sm font-medium text-gray-900">{activity.title}</p>
+                    <p className="text-xs text-gray-600 mt-1">{activity.course}</p>
+                    <p className="text-xs text-gray-500 mt-1">{activity.date} • {activity.time}</p>
+                  </div>
                 </div>
-                <div className="flex-1">
-                  <p className="text-sm font-medium text-gray-900">{event.title}</p>
-                  <p className="text-xs text-gray-600 mt-1">{event.date}</p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
@@ -180,8 +200,8 @@ export default function StudentDashboard() {
                 href={action.href}
                 className="flex items-center gap-3 p-3 hover:bg-gray-50 transition-colors border border-gray-100 hover:border-primary"
               >
-                <div className="w-8 h-8 bg-primary/10 flex items-center justify-center">
-                  <Icon icon={action.icon} className="text-primary" size="sm" />
+                <div className="w-8 h-8 bg-gray-100 flex items-center justify-center">
+                  <Icon icon={action.icon} className="text-gray-600" size="sm" />
                 </div>
                 <span className="text-sm font-medium text-gray-900">{action.label}</span>
                 <Icon icon={faArrowRight} className="ml-auto text-gray-400" size="sm" />
@@ -194,7 +214,7 @@ export default function StudentDashboard() {
         <div className="bg-white border border-gray-200 p-6">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-xl font-bold text-gray-900">Announcements</h2>
-            <Icon icon={faBell} className="text-primary" size="sm" />
+            <Icon icon={faBell} className="text-gray-600" size="sm" />
           </div>
           <div className="space-y-3">
             {announcements.map((announcement, index) => (
@@ -202,8 +222,8 @@ export default function StudentDashboard() {
                 key={index}
                 className="flex items-start gap-3 p-3 hover:bg-gray-50 transition-colors border-b border-gray-100 last:border-0"
               >
-                <div className="flex-shrink-0 w-8 h-8 bg-primary/10 flex items-center justify-center">
-                  <Icon icon={faNewspaper} className="text-primary" size="sm" />
+                <div className="flex-shrink-0 w-8 h-8 bg-gray-100 flex items-center justify-center">
+                  <Icon icon={faNewspaper} className="text-gray-600" size="sm" />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-start gap-2">
@@ -228,8 +248,8 @@ export default function StudentDashboard() {
                 key={index}
                 className="flex items-start gap-3 p-3 hover:bg-gray-50 transition-colors border-b border-gray-100 last:border-0"
               >
-                <div className="flex-shrink-0 w-8 h-8 bg-primary/10 flex items-center justify-center">
-                  <Icon icon={faCheckCircle} className="text-primary" size="sm" />
+                <div className="flex-shrink-0 w-8 h-8 bg-gray-100 flex items-center justify-center">
+                  <Icon icon={faCheckCircle} className="text-gray-600" size="sm" />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between mb-1">

@@ -15,6 +15,11 @@ import Icon, {
   faGraduationCap,
   faChevronLeft,
   faChevronRight,
+  faBell,
+  faEnvelope,
+  faQuestionCircle,
+  faStickyNote,
+  faCalendar,
 } from './Icon';
 
 interface StudentPortalSidebarProps {
@@ -46,11 +51,16 @@ export default function StudentPortalSidebar({ isOpen, onClose }: StudentPortalS
   const menuItems = [
     { icon: faHome, label: 'Dashboard', href: '/student/dashboard' },
     { icon: faBook, label: 'My Courses', href: '/student/courses' },
-    { icon: faFileAlt, label: 'Assignments', href: '/student/assignments' },
+    { icon: faFileAlt, label: 'Assessments', href: '/student/assignments' },
     { icon: faCertificate, label: 'Grades & Transcripts', href: '/student/grades' },
-    { icon: faBookOpen, label: 'E-Library', href: '/library/portal' },
+    { icon: faBookOpen, label: 'E-Library', href: '/student/library' },
+    { icon: faBell, label: 'Notifications', href: '/student/notifications' },
+    { icon: faEnvelope, label: 'Messages', href: '/student/messages' },
+    { icon: faCalendar, label: 'Deadlines', href: '/student/deadlines' },
+    { icon: faStickyNote, label: 'Study Notes', href: '/student/notes' },
     { icon: faDollarSign, label: 'Financial Info', href: '/student/financial' },
     { icon: faGraduationCap, label: 'Academic Records', href: '/student/records' },
+    { icon: faQuestionCircle, label: 'Help & Support', href: '/student/help' },
     { icon: faUser, label: 'Profile', href: '/student/profile' },
     { icon: faCog, label: 'Settings', href: '/student/settings' },
   ];
@@ -104,9 +114,9 @@ export default function StudentPortalSidebar({ isOpen, onClose }: StudentPortalS
           `}>
             <div className={`
               ${collapsed ? 'w-16 h-16' : 'w-24 h-24'}
-              rounded-full bg-primary flex items-center justify-center flex-shrink-0 mx-auto mb-3
+              rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0 mx-auto mb-3
             `}>
-              <Icon icon={faUser} className="text-white" size={collapsed ? 'lg' : '2x'} />
+              <Icon icon={faUser} className="text-gray-600" size={collapsed ? 'lg' : '2x'} />
             </div>
             {!collapsed && (
               <div className="text-center">

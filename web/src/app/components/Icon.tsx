@@ -100,6 +100,21 @@ export {
   faStar,
   faLock,
   faUserShield,
+  faFilter,
+  faExclamationCircle,
+  faEye,
+  faReceipt,
+  faCreditCard,
+  faIdCard,
+  faCamera,
+  faSave,
+  faShield,
+  faEyeSlash,
+  faFlag,
+  faPlay,
+  faCircle,
+  faQuestionCircle,
+  faStickyNote,
 } from '@fortawesome/free-solid-svg-icons';
 
 // Import for legacy exports

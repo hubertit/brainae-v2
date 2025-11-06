@@ -5,7 +5,7 @@ import StudentLogin from '../components/StudentLogin';
 
 export const metadata: Metadata = {
   title: "Student Portal - Login",
-  description: "Access your student portal to view courses, grades, assignments, and more at BRAINAE University.",
+    description: "Access your student portal to view courses, grades, assessments, and more at BRAINAE University.",
   openGraph: {
     title: "Student Portal - BRAINAE University",
     description: "Login to access your courses, grades, and academic resources",
@@ -23,7 +23,7 @@ export default function StudentPortalPage() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">Student Portal</h1>
             <p className="text-lg sm:text-xl text-primary-100">
-              Access your courses, grades, assignments, and academic resources
+              Access your courses, grades, assessments, and academic resources
             </p>
           </div>
         </div>
@@ -56,8 +56,8 @@ export default function StudentPortalPage() {
                   description: 'Check your grades, view transcripts, and download official documents',
                 },
                 {
-                  title: 'Assignments',
-                  description: 'Submit assignments, view feedback, and track submission deadlines',
+                  title: 'Assessments',
+                  description: 'Take exams, submit assignments, view feedback, and track submission deadlines',
                 },
                 {
                   title: 'E-Library',
