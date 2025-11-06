@@ -37,6 +37,9 @@ export default function Header() {
             <a href="/financial-aid" className="text-gray-700 hover:text-primary transition-colors">
               Financial Aid
             </a>
+            <a href="/accreditations" className="text-gray-700 hover:text-primary transition-colors">
+              Accreditations
+            </a>
             <a href="/contact" className="text-gray-700 hover:text-primary transition-colors">
               Contact
             </a>
@@ -103,6 +106,13 @@ export default function Header() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Financial Aid
+              </a>
+              <a
+                href="/accreditations"
+                className="text-gray-700 hover:text-primary transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Accreditations
               </a>
               <a
                 href="/contact"

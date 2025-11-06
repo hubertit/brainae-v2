@@ -115,6 +115,14 @@ export default function Footer() {
                   Financial Aid
                 </a>
               </li>
+              <li>
+                <a
+                  href="/accreditations"
+                  className="text-gray-400 hover:text-primary transition-colors inline-block"
+                >
+                  Accreditations
+                </a>
+              </li>
             </ul>
           </div>
 
