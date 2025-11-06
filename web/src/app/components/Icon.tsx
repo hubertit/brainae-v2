@@ -98,6 +98,8 @@ export {
   faCircleXmark,
   faDatabase,
   faStar,
+  faLock,
+  faUserShield,
 } from '@fortawesome/free-solid-svg-icons';
 
 // Import for legacy exports
