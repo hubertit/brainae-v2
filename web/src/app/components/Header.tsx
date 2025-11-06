@@ -19,10 +19,11 @@ export default function Header() {
                 alt="BRAINAE University"
                 width={128}
                 height={128}
-                className="w-12 h-12 rounded-full border border-gray-300"
+                className="h-14 w-14 rounded-full border border-gray-300"
               />
-              <span className="text-3xl font-extrabold text-primary">
-                Brainae University
+              <span className="text-3xl font-extrabold text-primary tracking-tighter leading-none inline-block">
+                <span className="block whitespace-nowrap">Brainae</span>
+                <span className="block font-light text-2xl text-gray-900 whitespace-nowrap -mt-2">University</span>
               </span>
             </a>
           </div>
