@@ -16,29 +16,32 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* About */}
-          <div>
-            <h3 className="text-xl font-bold mb-6 text-white">BRAINAE University</h3>
+          <div className="lg:col-span-1">
+            <h3 className="text-xl font-bold mb-4 text-white">BRAINAE University</h3>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               A fully-featured online educational platform that helps students and professionals 
-              around the world to acquire new skills. We deliver high-quality distance learning 
-              for working professionals and students.
+              around the world to acquire new skills through high-quality distance learning.
             </p>
             <div className="mb-6">
-              <h4 className="text-sm font-semibold text-white mb-3">Newsletter</h4>
+              <h4 className="text-sm font-semibold text-white mb-3">Stay Updated</h4>
               <NewsletterSignup variant="compact" />
             </div>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/Brainae_University"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary transition-colors"
                 aria-label="Facebook"
               >
                 <Icon icon={faFacebook} size="lg" />
               </a>
               <a
-                href="#"
+                href="https://twitter.com/Brainae_"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary transition-colors"
                 aria-label="Twitter"
               >
@@ -128,26 +131,10 @@ export default function Footer() {
                   Accreditations
                 </a>
               </li>
-              <li>
-                <a
-                  href="/verify-certificate"
-                  className="text-gray-400 hover:text-primary transition-colors inline-block"
-                >
-                  Verify Certificate
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/library"
-                  className="text-gray-400 hover:text-primary transition-colors inline-block"
-                >
-                  E-Library
-                </a>
-              </li>
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Resources & Services */}
           <div>
             <h3 className="text-lg font-semibold mb-6 text-white">Resources</h3>
             <ul className="space-y-3 text-sm">
@@ -157,14 +144,6 @@ export default function Footer() {
                   className="text-gray-400 hover:text-primary transition-colors inline-block"
                 >
                   Student Portal
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/contact"
-                  className="text-gray-400 hover:text-primary transition-colors inline-block"
-                >
-                  Contact Us
                 </a>
               </li>
               <li>
@@ -193,54 +172,17 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="/programs"
+                  href="/contact"
                   className="text-gray-400 hover:text-primary transition-colors inline-block"
                 >
-                  Course Catalog
+                  Contact Us
                 </a>
               </li>
               <li>
                 <a
-                  href="/financial-aid"
-                  className="text-gray-400 hover:text-primary transition-colors inline-block"
-                >
-                  Scholarships
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/about"
-                  className="text-gray-400 hover:text-primary transition-colors inline-block"
-                >
-                  University Mission
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Academic Programs */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 text-white">Academic Programs</h3>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <a
-                  href="/programs"
-                  className="text-gray-400 hover:text-primary transition-colors inline-block"
-                >
-                  Undergraduate
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/programs"
-                  className="text-gray-400 hover:text-primary transition-colors inline-block"
-                >
-                  Graduate Programs
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/programs"
+                  href="https://professionalstudies.brainae.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-400 hover:text-primary transition-colors inline-block"
                 >
                   Professional Studies
@@ -248,18 +190,12 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="/programs"
+                  href="https://brainajournal.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-400 hover:text-primary transition-colors inline-block"
                 >
-                  Online Learning
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/programs"
-                  className="text-gray-400 hover:text-primary transition-colors inline-block"
-                >
-                  Certificate Programs
+                  Journal
                 </a>
               </li>
             </ul>
@@ -268,12 +204,12 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h3 className="text-lg font-semibold mb-6 text-white">Contact Us</h3>
-            <ul className="space-y-4 text-sm text-gray-400">
+            <ul className="space-y-4 text-sm text-gray-400 mb-6">
               <li className="flex items-start">
                 <Icon icon={faLocationDot} className="mr-3 mt-1 flex-shrink-0 text-primary" />
                 <span className="leading-relaxed">
-                  123 University Avenue<br />
-                  City, Country 12345
+                  Online University<br />
+                  Worldwide Access
                 </span>
               </li>
               <li className="flex items-center">
@@ -295,14 +231,12 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-            <div className="mt-6">
-              <a
-                href="/contact"
-                className="inline-block bg-primary text-white px-6 py-2 rounded hover:bg-primary-600 transition-colors text-sm font-semibold"
-              >
-                Get in Touch
-              </a>
-            </div>
+            <a
+              href="/contact"
+              className="inline-block bg-primary text-white px-6 py-2 rounded hover:bg-primary-600 transition-colors text-sm font-semibold"
+            >
+              Get in Touch
+            </a>
           </div>
         </div>
 
@@ -310,7 +244,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
             <p>&copy; {currentYear} BRAINAE University. All rights reserved.</p>
-            <div className="flex flex-wrap gap-6">
+            <div className="flex flex-wrap gap-6 justify-center md:justify-end">
               <a
                 href="/privacy-policy"
                 className="hover:text-primary transition-colors"
@@ -336,4 +270,3 @@ export default function Footer() {
     </footer>
   );
 }
-

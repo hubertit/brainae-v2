@@ -213,7 +213,6 @@ export default function Home() {
       {/* Partners Section */}
       <PartnersCarousel />
 
-
       {/* CTA Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
