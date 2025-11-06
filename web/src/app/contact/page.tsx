@@ -87,7 +87,6 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <Breadcrumbs items={[{ label: 'Contact Us' }]} />
 
       {/* Hero */}
       <section className="bg-primary text-white py-16">

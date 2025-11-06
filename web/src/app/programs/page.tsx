@@ -152,7 +152,6 @@ export default function ProgramsPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <Breadcrumbs items={[{ label: 'Programs' }]} />
 
       {/* Hero */}
       <section className="bg-primary text-white py-16">
