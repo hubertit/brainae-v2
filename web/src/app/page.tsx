@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import PartnersCarousel from './components/PartnersCarousel';
+import TestimonialsCarousel from './components/TestimonialsCarousel';
 import Icon, {
   faGraduationCap,
   faBook,
@@ -161,51 +162,45 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gray-50 py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">What Our Learners Are Saying</h2>
-            <p className="text-center text-gray-600 mb-12">8+ million people are already learning on BRAINAE University</p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                name: 'Honorine Ugubwaneza',
-                quote: 'Great experience from BRAINAE. You get a lot of opportunities. Work hard to get it. Be prepared for everything. Maintain your attendance.',
-              },
-              {
-                name: 'John Hagenimana',
-                quote: 'BRAINAE University is a place where you can find an amalgamation of learning. I feel great studying at BRAINAE University as it gives great opportunities as well as support from faculties and placement officers.',
-              },
-              {
-                name: 'Gideon Maniriho',
-                quote: 'BRAINAE University and SET faculties have put in all the efforts to groom us and make us corporate professionals. It was a wonderful experience at BRAINAE University.',
-              },
-              {
-                name: 'Lauryn Bansal',
-                quote: 'I am a student at BRAINAE, majoring in Masters of Finance. I was amazingly surprised by the warmth and care of the administration and faculty members. I enjoyed every class.',
-              },
-              {
-                name: 'Sharma ATRASH',
-                quote: 'I have been a student in the School of Management for over two years now, and I can tell you that no other school can prepare you for a successful career the way that BRAINAE can.',
-              },
-              {
-                name: 'Joshi MENDA',
-                quote: 'I thank my department and its faculty members for encouraging me to think globally and spread my wings. I appreciate the support of my university for shaping my career.',
-              },
-            ].map((testimonial, index) => (
-              <div key={index} className="bg-white border border-gray-200 p-6">
-                <div className="mb-4">
-                  <div className="flex text-yellow-400 mb-2">
-                    {'★★★★★'.split('').map((star, i) => (
-                      <span key={i}>{star}</span>
-                    ))}
-                  </div>
-                </div>
-                <p className="text-gray-700 mb-4 italic">&ldquo;{testimonial.quote}&rdquo;</p>
-                <p className="text-sm font-semibold text-gray-900">— {testimonial.name}</p>
-              </div>
-            ))}
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Learners Are Saying</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                8+ million people are already learning on BRAINAE University. Here's what they have to say about their experience.
+              </p>
             </div>
+            <TestimonialsCarousel
+              testimonials={[
+                {
+                  name: 'Honorine Ugubwaneza',
+                  quote: 'Great experience from BRAINAE. You get a lot of opportunities. Work hard to get it. Be prepared for everything. Maintain your attendance.',
+                },
+                {
+                  name: 'John Hagenimana',
+                  quote: 'BRAINAE University is a place where you can find an amalgamation of learning. I feel great studying at BRAINAE University as it gives great opportunities as well as support from faculties and placement officers.',
+                },
+                {
+                  name: 'Gideon Maniriho',
+                  quote: 'BRAINAE University and SET faculties have put in all the efforts to groom us and make us corporate professionals. It was a wonderful experience at BRAINAE University.',
+                },
+                {
+                  name: 'Lauryn Bansal',
+                  quote: 'I am a student at BRAINAE, majoring in Masters of Finance. I was amazingly surprised by the warmth and care of the administration and faculty members. I enjoyed every class.',
+                },
+                {
+                  name: 'Sharma ATRASH',
+                  quote: 'I have been a student in the School of Management for over two years now, and I can tell you that no other school can prepare you for a successful career the way that BRAINAE can.',
+                },
+                {
+                  name: 'Joshi MENDA',
+                  quote: 'I thank my department and its faculty members for encouraging me to think globally and spread my wings. I appreciate the support of my university for shaping my career.',
+                },
+              ]}
+              autoPlay={true}
+              autoPlayInterval={5000}
+            />
           </div>
         </div>
       </section>

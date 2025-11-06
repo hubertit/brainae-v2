@@ -97,6 +97,7 @@ export {
   faSpinner,
   faCircleXmark,
   faDatabase,
+  faStar,
 } from '@fortawesome/free-solid-svg-icons';
 
 // Import for legacy exports
