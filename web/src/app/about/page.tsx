@@ -57,10 +57,10 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero */}
-      <section className="bg-primary text-white py-16">
+      <section className="bg-primary text-white py-12 sm:py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-4">About Brainae University</h1>
-          <p className="text-xl text-primary-100">
+          <h1 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">About Brainae University</h1>
+          <p className="text-lg sm:text-xl text-primary-100">
             Excellence in Education, Innovation in Learning
           </p>
         </div>

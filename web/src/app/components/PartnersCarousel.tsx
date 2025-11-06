@@ -36,7 +36,7 @@ export default function PartnersCarousel() {
             onMouseLeave={() => setIsPaused(false)}
           >
             <div
-              className="flex gap-8"
+              className="flex gap-4 sm:gap-6 md:gap-8"
               style={{
                 animation: isPaused ? 'none' : 'scroll 60s linear infinite',
                 width: 'fit-content',
@@ -45,11 +45,11 @@ export default function PartnersCarousel() {
               {duplicatedPartners.map((partner, index) => (
                 <div
                   key={`${partner.name}-${index}`}
-                  className="flex-shrink-0 w-48 h-32 flex items-center justify-center bg-white border border-gray-200 rounded-lg hover:border-primary hover:shadow-lg transition-all duration-300 grayscale hover:grayscale-0"
+                  className="flex-shrink-0 w-40 sm:w-44 md:w-48 h-28 sm:h-32 md:h-32 flex items-center justify-center bg-white border border-gray-200 rounded-lg hover:border-primary hover:shadow-lg transition-all duration-300 grayscale hover:grayscale-0"
                 >
-                  <div className="text-center p-4 w-full">
-                    <div className="text-3xl font-extrabold text-primary mb-2">{partner.logo}</div>
-                    <div className="text-xs text-gray-600 font-medium leading-tight">{partner.name}</div>
+                  <div className="text-center p-3 sm:p-4 w-full">
+                    <div className="text-2xl sm:text-3xl font-extrabold text-primary mb-1 sm:mb-2">{partner.logo}</div>
+                    <div className="text-[10px] sm:text-xs text-gray-600 font-medium leading-tight px-1">{partner.name}</div>
                   </div>
                 </div>
               ))}

@@ -28,7 +28,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-[800px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] flex items-center justify-center overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <div 
@@ -43,23 +43,23 @@ export default function Home() {
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 leading-tight px-4">
               Welcome to BRAINAE University
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-white/95 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 text-white/95 leading-relaxed px-4">
               Online education platform that accelerates your career and prepares you to face the future with in-demand skills
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
               <a
                 href="/application"
-                className="bg-white text-primary px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 inline-flex items-center justify-center font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="bg-white text-primary px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 inline-flex items-center justify-center font-semibold text-base sm:text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 Apply Now
                 <Icon icon={faArrowRight} className="ml-2" />
               </a>
               <a
                 href="/programs"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-primary transition-all duration-300 inline-flex items-center justify-center font-semibold text-lg"
+                className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-white hover:text-primary transition-all duration-300 inline-flex items-center justify-center font-semibold text-base sm:text-lg"
               >
                 Explore Programs
                 <Icon icon={faArrowRight} className="ml-2" />
@@ -162,12 +162,12 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-gray-50 py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Learners Are Saying</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">What Our Learners Are Saying</h2>
+              <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
                 8+ million people are already learning on BRAINAE University. Here's what they have to say about their experience.
               </p>
             </div>
