@@ -54,9 +54,6 @@ export default function Header() {
             <a href="/verify-certificate" className="text-sm text-gray-700 hover:text-primary transition-colors">
               Verify Certificate
             </a>
-            <a href="/library" className="text-sm text-gray-700 hover:text-primary transition-colors">
-              E-Library
-            </a>
             <a href="/contact" className="text-sm text-gray-700 hover:text-primary transition-colors">
               Contact
             </a>
@@ -137,13 +134,6 @@ export default function Header() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Verify Certificate
-              </a>
-              <a
-                href="/library"
-                className="text-sm text-gray-700 hover:text-primary transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                E-Library
               </a>
               <a
                 href="/contact"
