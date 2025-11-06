@@ -101,7 +101,7 @@ export default function StudentPortalSidebar({ isOpen, onClose }: StudentPortalS
               <span className="text-white font-bold text-sm">BU</span>
             </div>
             {!collapsed && (
-              <h2 className="text-xl font-semibold text-gray-900">Student Portal</h2>
+              <h2 className="text-lg font-semibold text-gray-900">Student Portal</h2>
             )}
           </div>
         </div>
@@ -120,7 +120,7 @@ export default function StudentPortalSidebar({ isOpen, onClose }: StudentPortalS
             </div>
             {!collapsed && (
               <div className="text-center">
-                <div className="text-base font-semibold text-gray-900 mb-1 truncate">
+                <div className="text-sm font-semibold text-gray-900 mb-1 truncate">
                   {userInfo.name}
                 </div>
                 {userInfo.email && (
@@ -164,7 +164,7 @@ export default function StudentPortalSidebar({ isOpen, onClose }: StudentPortalS
                       size="sm"
                     />
                     {!collapsed && (
-                      <span className="font-medium">{item.label}</span>
+                      <span className="text-sm font-medium">{item.label}</span>
                     )}
                   </Link>
                 </li>
@@ -188,7 +188,7 @@ export default function StudentPortalSidebar({ isOpen, onClose }: StudentPortalS
           <Link
             href="/"
             className={`
-              flex items-center gap-2 text-sm text-gray-600 hover:text-primary transition-colors
+              flex items-center gap-2 text-xs text-gray-600 hover:text-primary transition-colors
               ${collapsed ? 'justify-center' : ''}
             `}
             title={collapsed ? 'Back to Website' : undefined}

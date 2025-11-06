@@ -17,10 +17,26 @@ import Icon, {
 } from '../../components/Icon';
 
 export default function StudentDashboard() {
+  const getGradeDescription = (gpa: number): string => {
+    if (gpa >= 3.7) return 'A';
+    if (gpa >= 3.3) return 'A-';
+    if (gpa >= 3.0) return 'B+';
+    if (gpa >= 2.7) return 'B';
+    if (gpa >= 2.3) return 'B-';
+    if (gpa >= 2.0) return 'C+';
+    if (gpa >= 1.7) return 'C';
+    if (gpa >= 1.3) return 'C-';
+    if (gpa >= 1.0) return 'D';
+    return 'F';
+  };
+
+  const gpa = 3.8;
+  const gradeDescription = getGradeDescription(gpa);
+
   const stats = [
     { label: 'Active Courses', value: '5', icon: faBook },
     { label: 'Assessments Due', value: '3', icon: faFileAlt },
-    { label: 'GPA', value: '3.8', icon: faAward },
+    { label: 'GPA', value: `${gpa} (${gradeDescription})`, icon: faAward },
     { label: 'Credits Earned', value: '45', icon: faGraduationCap },
   ];
 
@@ -84,25 +100,27 @@ export default function StudentDashboard() {
         {stats.map((stat, index) => (
           <div
             key={index}
-            className="bg-white border border-gray-200 p-6 hover:border-primary transition-colors"
+            className="bg-white border border-gray-200 p-5 hover:border-primary transition-colors"
           >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-gray-100 flex items-center justify-center">
+            <div className="flex items-center justify-between">
+              <div className="flex-1">
+                <div className="text-3xl font-bold text-gray-900 mb-1">{stat.value}</div>
+                <div className="text-sm text-gray-600">{stat.label}</div>
+              </div>
+              <div className="w-12 h-12 bg-gray-100 flex items-center justify-center flex-shrink-0 ml-4">
                 <Icon icon={stat.icon} className="text-gray-600" size="lg" />
               </div>
             </div>
-            <div className="text-3xl font-bold text-gray-900 mb-1">{stat.value}</div>
-            <div className="text-sm text-gray-600">{stat.label}</div>
           </div>
         ))}
       </div>
 
       <div className="grid lg:grid-cols-3 gap-8">
         {/* Recent Courses */}
-        <div className="lg:col-span-2">
-          <div className="bg-white border border-gray-200 p-6">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-xl font-bold text-gray-900">My Courses</h2>
+        <div className="lg:col-span-2 flex">
+          <div className="bg-white border border-gray-200 p-5 flex flex-col w-full">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-lg font-bold text-gray-900">My Courses</h2>
               <a
                 href="/student/courses"
                 className="text-primary hover:text-primary-600 text-sm font-medium flex items-center gap-1"
@@ -111,36 +129,41 @@ export default function StudentDashboard() {
                 <Icon icon={faArrowRight} size="sm" />
               </a>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-3 flex-1">
               {recentCourses.map((course, index) => (
                 <div
                   key={index}
-                  className="border border-gray-200 p-5 hover:border-primary transition-colors cursor-pointer"
+                  className="border border-gray-200 p-4 hover:border-primary transition-colors cursor-pointer"
                 >
-                  <div className="flex items-start justify-between mb-3">
-                    <div className="flex-1">
-                      <h3 className="font-semibold text-gray-900 mb-1">{course.name}</h3>
-                      <p className="text-sm text-gray-600">{course.code}</p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3 flex-1 min-w-0">
+                      <div className="w-10 h-10 bg-gray-100 flex items-center justify-center flex-shrink-0">
+                        <Icon icon={faBook} className="text-gray-600" size="sm" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-sm font-semibold text-gray-900 mb-0.5 truncate">{course.name}</h3>
+                        <p className="text-xs text-gray-600 mb-1">{course.code}</p>
+                        <p className="text-xs text-gray-500 truncate">{course.nextAssignment}</p>
+                      </div>
                     </div>
-                    <span className="text-sm font-semibold text-primary">
-                      {course.progress}%
-                    </span>
-                  </div>
-                  <div className="mb-4">
-                    <div className="flex items-center justify-between text-xs text-gray-600 mb-2">
-                      <span>Progress</span>
-                      <span>{course.progress}%</span>
+                    <div className="flex items-center gap-3 ml-3 flex-shrink-0">
+                      <div className="text-right">
+                        <div className="text-sm font-semibold text-gray-900 mb-1">{course.progress}%</div>
+                        <div className="w-20 bg-gray-200 h-1.5">
+                          <div
+                            className="bg-primary h-1.5 transition-all"
+                            style={{ width: `${course.progress}%` }}
+                          />
+                        </div>
+                      </div>
+                      <a
+                        href="/student/courses"
+                        className="p-1.5 hover:bg-gray-100 transition-colors"
+                        aria-label="View course"
+                      >
+                        <Icon icon={faArrowRight} className="text-gray-600" size="sm" />
+                      </a>
                     </div>
-                    <div className="w-full bg-gray-200 h-2">
-                      <div
-                        className="bg-primary h-2 transition-all"
-                        style={{ width: `${course.progress}%` }}
-                      />
-                    </div>
-                  </div>
-                  <div className="flex items-center text-sm text-gray-600">
-                    <Icon icon={faClock} className="mr-2 text-gray-500" size="sm" />
-                    <span>{course.nextAssignment}</span>
                   </div>
                 </div>
               ))}
@@ -149,41 +172,43 @@ export default function StudentDashboard() {
         </div>
 
         {/* Recent Activities */}
-        <div className="bg-white border border-gray-200 p-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Recent Activities</h2>
-          <div className="space-y-3">
-            {recentActivities.map((activity, index) => {
-              const getActivityIcon = () => {
-                switch (activity.type) {
-                  case 'submission':
-                    return faFileAlt;
-                  case 'access':
-                    return faBookOpen;
-                  case 'grade':
-                    return faAward;
-                  case 'download':
-                    return faDownload;
-                  default:
-                    return faClock;
-                }
-              };
+        <div className="flex">
+          <div className="bg-white border border-gray-200 p-5 flex flex-col w-full">
+            <h2 className="text-lg font-bold text-gray-900 mb-4">Recent Activities</h2>
+            <div className="space-y-2 flex-1">
+              {recentActivities.map((activity, index) => {
+                const getActivityIcon = () => {
+                  switch (activity.type) {
+                    case 'submission':
+                      return faFileAlt;
+                    case 'access':
+                      return faBookOpen;
+                    case 'grade':
+                      return faAward;
+                    case 'download':
+                      return faDownload;
+                    default:
+                      return faClock;
+                  }
+                };
 
-              return (
-                <div
-                  key={index}
-                  className="flex items-start gap-3 p-3 hover:bg-gray-50 transition-colors border-b border-gray-100 last:border-0"
-                >
-                  <div className="flex-shrink-0 w-8 h-8 bg-gray-100 flex items-center justify-center">
-                    <Icon icon={getActivityIcon()} className="text-gray-600" size="sm" />
+                return (
+                  <div
+                    key={index}
+                    className="flex items-start gap-2.5 p-2.5 hover:bg-gray-50 transition-colors border-b border-gray-100 last:border-0"
+                  >
+                    <div className="flex-shrink-0 w-7 h-7 bg-gray-100 flex items-center justify-center">
+                      <Icon icon={getActivityIcon()} className="text-gray-600" size="xs" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-xs font-medium text-gray-900 truncate">{activity.title}</p>
+                      <p className="text-xs text-gray-600 mt-0.5 truncate">{activity.course}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{activity.date} • {activity.time}</p>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <p className="text-sm font-medium text-gray-900">{activity.title}</p>
-                    <p className="text-xs text-gray-600 mt-1">{activity.course}</p>
-                    <p className="text-xs text-gray-500 mt-1">{activity.date} • {activity.time}</p>
-                  </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

@@ -19,39 +19,39 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
-            <a href="/about" className="text-gray-700 hover:text-primary transition-colors">
+            <a href="/about" className="text-sm text-gray-700 hover:text-primary transition-colors">
               About
             </a>
-            <a href="/admissions" className="text-gray-700 hover:text-primary transition-colors">
+            <a href="/admissions" className="text-sm text-gray-700 hover:text-primary transition-colors">
               Admissions
             </a>
-            <a href="/programs" className="text-gray-700 hover:text-primary transition-colors">
+            <a href="/programs" className="text-sm text-gray-700 hover:text-primary transition-colors">
               Programs
             </a>
-            <a href="/faculty" className="text-gray-700 hover:text-primary transition-colors">
+            <a href="/faculty" className="text-sm text-gray-700 hover:text-primary transition-colors">
               Faculty
             </a>
-            <a href="/research" className="text-gray-700 hover:text-primary transition-colors">
+            <a href="/research" className="text-sm text-gray-700 hover:text-primary transition-colors">
               Research
             </a>
-            <a href="/financial-aid" className="text-gray-700 hover:text-primary transition-colors">
+            <a href="/financial-aid" className="text-sm text-gray-700 hover:text-primary transition-colors">
               Financial Aid
             </a>
-            <a href="/accreditations" className="text-gray-700 hover:text-primary transition-colors">
+            <a href="/accreditations" className="text-sm text-gray-700 hover:text-primary transition-colors">
               Accreditations
             </a>
-            <a href="/verify-certificate" className="text-gray-700 hover:text-primary transition-colors">
+            <a href="/verify-certificate" className="text-sm text-gray-700 hover:text-primary transition-colors">
               Verify Certificate
             </a>
-            <a href="/library" className="text-gray-700 hover:text-primary transition-colors">
+            <a href="/library" className="text-sm text-gray-700 hover:text-primary transition-colors">
               E-Library
             </a>
-            <a href="/contact" className="text-gray-700 hover:text-primary transition-colors">
+            <a href="/contact" className="text-sm text-gray-700 hover:text-primary transition-colors">
               Contact
             </a>
             <a
               href="/student"
-              className="bg-primary text-white px-4 py-2 rounded hover:bg-primary-600 transition-colors"
+              className="bg-primary text-white text-sm px-4 py-2 rounded hover:bg-primary-600 transition-colors"
             >
               Student Portal
             </a>
@@ -73,77 +73,77 @@ export default function Header() {
             <div className="flex flex-col space-y-4">
               <a
                 href="/about"
-                className="text-gray-700 hover:text-primary transition-colors"
+                className="text-sm text-gray-700 hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
               </a>
               <a
                 href="/admissions"
-                className="text-gray-700 hover:text-primary transition-colors"
+                className="text-sm text-gray-700 hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Admissions
               </a>
               <a
                 href="/programs"
-                className="text-gray-700 hover:text-primary transition-colors"
+                className="text-sm text-gray-700 hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Programs
               </a>
               <a
                 href="/faculty"
-                className="text-gray-700 hover:text-primary transition-colors"
+                className="text-sm text-gray-700 hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Faculty
               </a>
               <a
                 href="/research"
-                className="text-gray-700 hover:text-primary transition-colors"
+                className="text-sm text-gray-700 hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Research
               </a>
               <a
                 href="/financial-aid"
-                className="text-gray-700 hover:text-primary transition-colors"
+                className="text-sm text-gray-700 hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Financial Aid
               </a>
               <a
                 href="/accreditations"
-                className="text-gray-700 hover:text-primary transition-colors"
+                className="text-sm text-gray-700 hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Accreditations
               </a>
               <a
                 href="/verify-certificate"
-                className="text-gray-700 hover:text-primary transition-colors"
+                className="text-sm text-gray-700 hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Verify Certificate
               </a>
               <a
                 href="/library"
-                className="text-gray-700 hover:text-primary transition-colors"
+                className="text-sm text-gray-700 hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 E-Library
               </a>
               <a
                 href="/contact"
-                className="text-gray-700 hover:text-primary transition-colors"
+                className="text-sm text-gray-700 hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
               </a>
               <a
                 href="/student"
-                className="bg-primary text-white px-4 py-2 rounded text-center hover:bg-primary-600 transition-colors"
+                className="bg-primary text-white text-sm px-4 py-2 rounded text-center hover:bg-primary-600 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Student Portal

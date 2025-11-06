@@ -1,6 +1,4 @@
 import type { Metadata } from 'next';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import StudentLogin from '../components/StudentLogin';
 
 export const metadata: Metadata = {
@@ -15,103 +13,123 @@ export const metadata: Metadata = {
 export default function StudentPortalPage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header />
+      {/* Split Layout: Cover + Login */}
+      <section className="min-h-screen flex">
+        {/* Login Side - Left */}
+        <div className="w-full lg:w-[40%] lg:min-w-[500px] bg-white flex items-center justify-center p-8">
+          <div className="w-full max-w-[400px]">
+            {/* Logo */}
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-lg mb-4">
+                <span className="text-white font-bold text-xl">BU</span>
+              </div>
+            </div>
 
-      {/* Hero Section */}
-      <section className="bg-primary text-white py-12 sm:py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">Student Portal</h1>
-            <p className="text-lg sm:text-xl text-primary-100">
-              Access your courses, grades, assessments, and academic resources
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Title */}
+            <h1 className="text-2xl font-medium text-gray-900 mb-2 text-center">
+              Student Portal Login
+            </h1>
 
-      {/* Login Section */}
-      <section className="py-12 sm:py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-md mx-auto">
+            {/* Auth Links */}
+            <div className="text-center mb-8 text-sm text-gray-600">
+              <span>New student? </span>
+              <a href="/application" className="text-primary font-medium hover:underline">
+                Apply for admission
+              </a>
+            </div>
+
+            {/* Login Form */}
             <StudentLogin />
+
+            {/* Back to Home Button */}
+            <div className="mt-8">
+              <a 
+                href="/" 
+                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 border border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-primary hover:text-primary transition-colors rounded font-medium text-sm"
+              >
+                <span>←</span>
+                <span>Back to Home</span>
+              </a>
+            </div>
+
+            {/* Footer Text */}
+            <div className="mt-6 text-center text-gray-600 text-xs leading-relaxed">
+              <p>© 2024 Brainae University</p>
+              <p>A comprehensive online learning platform</p>
+              <p>Empowering students worldwide</p>
+            </div>
           </div>
         </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="bg-white py-12 sm:py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center">
-              What You Can Access
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  title: 'My Courses',
-                  description: 'View all your enrolled courses, access course materials, and track your progress',
-                },
-                {
-                  title: 'Grades & Transcripts',
-                  description: 'Check your grades, view transcripts, and download official documents',
-                },
-                {
-                  title: 'Assessments',
-                  description: 'Take exams, submit assignments, view feedback, and track submission deadlines',
-                },
-                {
-                  title: 'E-Library',
-                  description: 'Access digital library resources, e-books, journals, and research materials',
-                },
-                {
-                  title: 'Financial Information',
-                  description: 'View tuition fees, payment history, and financial aid information',
-                },
-                {
-                  title: 'Profile & Settings',
-                  description: 'Update your personal information, preferences, and account settings',
-                },
-              ].map((feature, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-50 border border-gray-200 p-6 rounded-lg hover:border-primary transition-colors"
-                >
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                  <p className="text-sm text-gray-600">{feature.description}</p>
+        {/* Cover Side - Right */}
+        <div 
+          className="hidden lg:flex flex-1 bg-cover bg-center relative"
+          style={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/hero.jpg')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          {/* Additional overlay for better text visibility */}
+          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 flex items-center justify-center z-10">
+            <div className="text-white px-8 max-w-md">
+              <h2 className="text-4xl font-bold mb-4 text-center">Welcome to Student Portal</h2>
+              <p className="text-lg text-white/90 mb-8 text-center">
+                Access your courses, grades, assessments, and all your academic resources in one place.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-white text-sm">✓</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">Course Management</h3>
+                    <p className="text-sm text-white/80">Access all your courses and learning materials</p>
+                  </div>
                 </div>
-              ))}
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-white text-sm">✓</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">Online Assessments</h3>
+                    <p className="text-sm text-white/80">Take exams and submit assignments online</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-white text-sm">✓</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">E-Library Access</h3>
+                    <p className="text-sm text-white/80">Browse digital resources and research materials</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-white text-sm">✓</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">Grades & Transcripts</h3>
+                    <p className="text-sm text-white/80">View your grades and download official documents</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-white text-sm">✓</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">Financial Information</h3>
+                    <p className="text-sm text-white/80">View tuition fees and payment history</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Help Section */}
-      <section className="bg-gray-50 py-12 sm:py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Need Help?</h2>
-            <p className="text-gray-600 mb-6">
-              If you're having trouble accessing your account or need assistance, please contact our support team.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-primary text-white px-6 py-3 rounded hover:bg-primary-600 transition-colors inline-flex items-center justify-center"
-              >
-                Contact Support
-              </a>
-              <a
-                href="/admissions"
-                className="border-2 border-gray-300 text-gray-700 px-6 py-3 rounded hover:border-primary hover:text-primary transition-colors inline-flex items-center justify-center"
-              >
-                New Student? Apply Now
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
     </div>
   );
 }

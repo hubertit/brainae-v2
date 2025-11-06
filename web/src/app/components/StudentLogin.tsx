@@ -79,32 +79,23 @@ export default function StudentLogin() {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-8">
-      <div className="text-center mb-8">
-        <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
-          <Icon icon={faUser} className="text-primary" size="2x" />
-        </div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">Login to Your Account</h2>
-        <p className="text-gray-600 text-sm">
-          Enter your student credentials to access the portal
-        </p>
-      </div>
-
-      <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-5">
         {error && (
-          <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded text-sm">
-            {error}
+          <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded text-sm flex items-center gap-2">
+            <span>⚠</span>
+            <span>{error}</span>
           </div>
         )}
 
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-2">
             Email Address
           </label>
           <div className="relative">
             <Icon
               icon={faEnvelope}
               className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+              size="sm"
             />
             <input
               type="email"
@@ -113,20 +104,21 @@ export default function StudentLogin() {
               required
               value={formData.email}
               onChange={handleChange}
-              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors"
+              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all bg-white"
               placeholder="student@brainae.edu"
             />
           </div>
         </div>
 
         <div>
-          <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="password" className="block text-sm font-medium text-gray-900 mb-2">
             Password
           </label>
           <div className="relative">
             <Icon
               icon={faLock}
               className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+              size="sm"
             />
             <input
               type="password"
@@ -135,53 +127,36 @@ export default function StudentLogin() {
               required
               value={formData.password}
               onChange={handleChange}
-              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors"
+              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all bg-white"
               placeholder="Enter your password"
             />
           </div>
         </div>
 
-        <div className="flex items-center justify-between">
-          <label className="flex items-center">
-            <input
-              type="checkbox"
-              className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
-            />
-            <span className="ml-2 text-sm text-gray-600">Remember me</span>
-          </label>
-          <a
-            href="#"
-            className="text-sm text-primary hover:text-primary-600 font-medium"
-          >
-            Forgot password?
-          </a>
-        </div>
-
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-primary text-white py-3 rounded-lg hover:bg-primary-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-semibold flex items-center justify-center"
+          className="w-full bg-primary text-white py-3 rounded hover:bg-primary/90 transition-all disabled:opacity-70 disabled:cursor-not-allowed font-medium flex items-center justify-center gap-2 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0"
         >
           {isSubmitting ? (
             <>
-              <Icon icon={faSpinner} className="mr-2" spin />
+              <Icon icon={faSpinner} className="animate-spin" size="sm" />
               Logging in...
             </>
           ) : (
             'Login'
           )}
         </button>
-      </form>
 
-      <div className="mt-6 pt-6 border-t border-gray-200 text-center">
-        <p className="text-sm text-gray-600">
-          New student?{' '}
-          <a href="/application" className="text-primary hover:text-primary-600 font-medium">
-            Apply for admission
+        <div className="text-center mt-6">
+          <a
+            href="/student/forgot-password"
+            className="text-sm text-primary hover:underline font-medium"
+          >
+            Forgot password?
           </a>
-        </p>
-      </div>
-    </div>
+        </div>
+      </form>
   );
 }
 
