@@ -16,9 +16,9 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {/* About */}
-          <div className="lg:col-span-1">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+          {/* About - Wider Column */}
+          <div className="lg:col-span-2">
             <h3 className="text-xl font-bold mb-4 text-white">BRAINAE University</h3>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               A fully-featured online educational platform that helps students and professionals 
@@ -196,6 +196,53 @@ export default function Footer() {
                   className="text-gray-400 hover:text-primary transition-colors inline-block"
                 >
                   Journal
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Academic Programs */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 text-white">Academic Programs</h3>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <a
+                  href="/programs"
+                  className="text-gray-400 hover:text-primary transition-colors inline-block"
+                >
+                  Undergraduate
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/programs"
+                  className="text-gray-400 hover:text-primary transition-colors inline-block"
+                >
+                  Graduate Programs
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/programs"
+                  className="text-gray-400 hover:text-primary transition-colors inline-block"
+                >
+                  Professional Studies
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/programs"
+                  className="text-gray-400 hover:text-primary transition-colors inline-block"
+                >
+                  Certificate Programs
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/programs"
+                  className="text-gray-400 hover:text-primary transition-colors inline-block"
+                >
+                  Online Learning
                 </a>
               </li>
             </ul>
