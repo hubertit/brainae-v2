@@ -20,38 +20,110 @@ export default function ProgramsPage() {
     {
       icon: faBriefcase,
       name: 'Business and Economics',
-      description: 'The School of Business and Economics focuses intensively on preparing candidates to direct highly specialized business operations and economic analysis.',
-      programs: ['Business Administration', 'Economics', 'Finance', 'Marketing', 'Management'],
+      description: 'The School of Business and Economics focuses intensively on preparing candidates to direct highly specialized scholarly research, application of theory and development of new theory in the business disciplines.',
+      programs: [
+        'Doctor of Philosophy (PhD) by Course Work',
+        'Master',
+        'Bachelor',
+        'Postdoctoral Fellowship',
+        'Doctor of Philosophy (PhD) by Research',
+        'Master of Philosophy (MPhil)',
+        'Postgraduate Diploma',
+        'Advanced Diploma',
+        'Diploma',
+        'Certificate',
+        'Postdoctoral Degree',
+      ],
     },
     {
       icon: faHeartbeat,
       name: 'Health Science',
-      description: 'The School of Medicine and Health helps working professionals make the connection between their real-world experience and academic achievement in healthcare.',
-      programs: ['Public Health', 'Health Administration', 'Nursing', 'Health Sciences'],
+      description: 'The School of Medicine and Health helps working professionals make the connection between their relative in order to develop marketable technical, creative, and managerial skills.',
+      programs: [
+        'Doctor of Philosophy (PhD) by Course Work',
+        'Master',
+        'Bachelor',
+        'Postdoctoral Fellowship',
+        'Doctor of Philosophy (PhD) by Research',
+        'Master of Philosophy (MPhil)',
+        'Postgraduate Diploma',
+        'Advanced Diploma',
+        'Diploma',
+        'Certificate',
+        'Postdoctoral Degree',
+      ],
     },
     {
       icon: faLaptopCode,
       name: 'Science and Technology',
-      description: 'The School of Sciences and Technology is best suited for leading development professionals who seek administrative and technical expertise.',
-      programs: ['Computer Science', 'Information Technology', 'Data Science', 'Engineering'],
+      description: 'The School of Sciences and Technology is best suited for leading development who seek administrative or executive positions within the industry.',
+      programs: [
+        'Doctor of Philosophy (PhD) by Course Work',
+        'Master',
+        'Bachelor',
+        'Postdoctoral Fellowship',
+        'Doctor of Philosophy (PhD) by Research',
+        'Master of Philosophy (MPhil)',
+        'Postgraduate Diploma',
+        'Advanced Diploma',
+        'Diploma',
+        'Certificate',
+        'Postdoctoral Degree',
+      ],
     },
     {
       icon: faUsersCog,
       name: 'Social Science',
-      description: 'The School of Social Sciences and Education prepares students for administrative and teaching positions in educational and social service settings.',
-      programs: ['Social Work', 'Psychology', 'Sociology', 'Political Science'],
+      description: 'The School of Social Sciences and Education prepare students for administrative and teaching positionas careers in Social and education sector.',
+      programs: [
+        'Doctor of Philosophy (PhD) by Course Work',
+        'Master',
+        'Bachelor',
+        'Postdoctoral Fellowship',
+        'Doctor of Philosophy (PhD) by Research',
+        'Master of Philosophy (MPhil)',
+        'Postgraduate Diploma',
+        'Advanced Diploma',
+        'Diploma',
+        'Certificate',
+        'Postdoctoral Degree',
+      ],
     },
     {
       icon: faBookOpen,
       name: 'Bible Studies',
-      description: 'In the School of Bible Studies you learn where you come from, why you are here and where you are heading. Deep theological education for ministry and service.',
-      programs: ['Theology', 'Biblical Studies', 'Ministry', 'Religious Education'],
+      description: 'In the School of Bible Studies you learn where you come from, why you are here and where you are heading after this life. There are many conflicting messages in the "religious" world.',
+      programs: [
+        'Doctor of Philosophy (PhD) by Course Work',
+        'Master',
+        'Bachelor',
+        'Postdoctoral Fellowship',
+        'Doctor of Philosophy (PhD) by Research',
+        'Master of Philosophy (MPhil)',
+        'Postgraduate Diploma',
+        'Advanced Diploma',
+        'Diploma',
+        'Certificate',
+        'Postdoctoral Degree',
+      ],
     },
     {
       icon: faChalkboardTeacher,
       name: 'Education',
-      description: 'The mission of this school is to promote student achievement and preparation for global competitiveness by fostering educational excellence.',
-      programs: ['Educational Leadership', 'Curriculum Development', 'Teaching Methods', 'Educational Technology'],
+      description: 'The mission of this school is to promote student achievement and preparation for global competitiveness by fostering educational excellence and ensuring equal access.',
+      programs: [
+        'Doctor of Philosophy (PhD) by Course Work',
+        'Master',
+        'Bachelor',
+        'Postdoctoral Fellowship',
+        'Doctor of Philosophy (PhD) by Research',
+        'Master of Philosophy (MPhil)',
+        'Postgraduate Diploma',
+        'Advanced Diploma',
+        'Diploma',
+        'Certificate',
+        'Postdoctoral Degree',
+      ],
     },
   ];
 
@@ -103,13 +175,6 @@ export default function ProgramsPage() {
                     ))}
                   </ul>
                 </div>
-                <a
-                  href={`/programs/${school.name.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="inline-flex items-center text-primary hover:text-primary-600 text-sm font-semibold"
-                >
-                  View Programs
-                  <Icon icon={faArrowRight} className="ml-2" />
-                </a>
               </div>
             ))}
             </div>
@@ -139,7 +204,9 @@ export default function ProgramsPage() {
               </div>
               <div className="mt-6">
                 <a
-                  href="/programs/professional-studies"
+                  href="https://professionalstudies.brainae.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center bg-primary text-white px-6 py-3 rounded hover:bg-primary-600 transition-colors"
                 >
                   Explore Professional Studies
@@ -200,7 +267,7 @@ export default function ProgramsPage() {
                 <Icon icon={faArrowRight} className="ml-2" />
               </a>
               <a
-                href="#contact"
+                href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded hover:bg-white hover:text-primary transition-colors inline-flex items-center justify-center"
               >
                 Contact Us
