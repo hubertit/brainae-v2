@@ -213,14 +213,6 @@ export default function Home() {
       {/* Partners Section */}
       <PartnersCarousel />
 
-      {/* Newsletter Section */}
-      <section className="bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <NewsletterSignup />
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-16">
