@@ -59,7 +59,7 @@ export default function Home() {
               </a>
               <a
                 href="/programs"
-                className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-white hover:text-primary transition-all duration-300 inline-flex items-center justify-center font-semibold text-base sm:text-lg"
+                className="border-2 border-white/80 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg bg-white/10 backdrop-blur-md hover:bg-white/20 transition-all duration-300 inline-flex items-center justify-center font-semibold text-base sm:text-lg shadow-lg"
               >
                 Explore Programs
                 <Icon icon={faArrowRight} className="ml-2" />

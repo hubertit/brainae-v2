@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import Icon, {
   faHome,
   faBook,
@@ -72,11 +73,15 @@ export default function LecturerPortalSidebar({ isOpen, onClose }: LecturerPorta
         `}
       >
         {/* Logo Section */}
-        <div className="p-5 border-b border-gray-200">
+        <div className="p-5 border-b border-gray-200 flex-shrink-0">
           <div className={`flex items-center ${collapsed ? 'justify-center' : 'gap-2'}`}>
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-              <Icon icon={faChalkboardTeacher} className="text-white" size="sm" />
-            </div>
+            <Image
+              src="/icon.png"
+              alt="BRAINAE University"
+              width={64}
+              height={64}
+              className="w-10 h-10 flex-shrink-0 rounded-full border border-gray-300"
+            />
             {!collapsed && (
               <h2 className="text-xl font-semibold text-gray-900">Lecturer Portal</h2>
             )}

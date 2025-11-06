@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Icon, { faBars, faTimes } from './Icon';
 
 export default function Header() {
@@ -11,9 +12,18 @@ export default function Header() {
       <nav className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center">
-            <a href="/" className="text-3xl font-extrabold text-primary">
-              Brainae University
+          <div className="flex items-center gap-3">
+            <a href="/" className="flex items-center gap-3">
+              <Image
+                src="/icon.png"
+                alt="BRAINAE University"
+                width={128}
+                height={128}
+                className="w-12 h-12 rounded-full border border-gray-300"
+              />
+              <span className="text-3xl font-extrabold text-primary">
+                Brainae University
+              </span>
             </a>
           </div>
 

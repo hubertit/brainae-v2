@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
+import Image from 'next/image';
 import Icon, { faLock, faSpinner, faArrowLeft, faEye, faEyeSlash } from '../../../components/Icon';
 
 export default function ResetPasswordPage() {
@@ -89,8 +90,14 @@ export default function ResetPasswordPage() {
 
             {/* Logo */}
             <div className="text-center mb-8">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-lg mb-4">
-                <span className="text-white font-bold text-xl">BU</span>
+              <div className="inline-flex items-center justify-center mb-4">
+                <Image
+                  src="/icon.png"
+                  alt="BRAINAE University"
+                  width={128}
+                  height={128}
+                  className="w-16 h-16 rounded-full border border-gray-300"
+                />
               </div>
             </div>
 

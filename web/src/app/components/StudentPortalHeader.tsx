@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import Icon, { faBars, faTimes, faBell, faRightFromBracket, faUser, faSearch, faCog, faChevronDown, faNewspaper, faAward, faFileAlt, faArrowRight } from './Icon';
 
 interface StudentPortalHeaderProps {
@@ -75,9 +76,13 @@ export default function StudentPortalHeader({
             <Icon icon={sidebarOpen ? faTimes : faBars} className="text-gray-700" />
           </button>
           <a href="/student/dashboard" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">BU</span>
-            </div>
+            <Image
+              src="/icon.png"
+              alt="BRAINAE University"
+              width={64}
+              height={64}
+              className="w-8 h-8 rounded-full border border-gray-300"
+            />
             <span className="font-bold text-gray-900 hidden sm:inline">Student Portal</span>
           </a>
         </div>

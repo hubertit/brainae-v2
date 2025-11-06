@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import Icon, { faBars, faTimes, faBell, faRightFromBracket, faUserShield } from './Icon';
 
 interface AdminPortalHeaderProps {
@@ -35,9 +36,13 @@ export default function AdminPortalHeader({
               <Icon icon={sidebarOpen ? faTimes : faBars} className="text-gray-700" />
             </button>
             <a href="/admin/dashboard" className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center">
-                <Icon icon={faUserShield} className="text-white" size="sm" />
-              </div>
+              <Image
+                src="/icon.png"
+                alt="BRAINAE University"
+                width={64}
+                height={64}
+                className="w-8 h-8 rounded-full border border-gray-300"
+              />
               <span className="font-bold text-gray-900 hidden sm:inline">Admin Portal</span>
             </a>
           </div>

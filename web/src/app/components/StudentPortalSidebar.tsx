@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import Icon, {
   faHome,
   faBook,
@@ -91,15 +92,18 @@ export default function StudentPortalSidebar({ isOpen, onClose }: StudentPortalS
           ${isOpen ? 'translate-x-0' : '-translate-x-full'}
           ${collapsed ? 'w-20' : 'w-64'}
           flex flex-col
-          overflow-y-auto
         `}
       >
         {/* Logo Section */}
-        <div className="p-5 border-b border-gray-200">
+        <div className="p-5 border-b border-gray-200 flex-shrink-0">
           <div className={`flex items-center ${collapsed ? 'justify-center' : 'gap-2'}`}>
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-              <span className="text-white font-bold text-sm">BU</span>
-            </div>
+            <Image
+              src="/icon.png"
+              alt="BRAINAE University"
+              width={64}
+              height={64}
+              className="w-10 h-10 flex-shrink-0 rounded-full border border-gray-300"
+            />
             {!collapsed && (
               <h2 className="text-lg font-semibold text-gray-900">Student Portal</h2>
             )}
@@ -109,7 +113,7 @@ export default function StudentPortalSidebar({ isOpen, onClose }: StudentPortalS
         {/* User Information Section */}
         {userInfo && (
           <div className={`
-            p-5 border-b border-gray-200
+            p-5 border-b border-gray-200 flex-shrink-0
             ${collapsed ? 'flex flex-col items-center' : ''}
           `}>
             <div className={`
@@ -136,8 +140,8 @@ export default function StudentPortalSidebar({ isOpen, onClose }: StudentPortalS
           </div>
         )}
 
-        {/* Navigation */}
-        <nav className="flex-1 py-4">
+        {/* Navigation - Scrollable */}
+        <nav className="flex-1 py-4 overflow-y-auto min-h-0">
           <ul className="space-y-1 px-2">
             {menuItems.map((item, index) => {
               const active = isActive(item.href);
@@ -174,7 +178,7 @@ export default function StudentPortalSidebar({ isOpen, onClose }: StudentPortalS
         </nav>
 
         {/* Collapse Toggle & Footer */}
-        <div className="p-4 border-t border-gray-200 space-y-3">
+        <div className="p-4 border-t border-gray-200 space-y-3 flex-shrink-0">
           {/* Collapse Toggle (Desktop only) */}
           <button
             onClick={() => setCollapsed(!collapsed)}
