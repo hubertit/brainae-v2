@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Icon, {
@@ -6,6 +7,15 @@ import Icon, {
   faGraduationCap,
   faSearch,
 } from '../components/Icon';
+
+export const metadata: Metadata = {
+  title: "Faculty",
+  description: "Meet the distinguished faculty members of BRAINAE University. Our experienced professors and instructors are dedicated to providing quality online education across all academic disciplines.",
+  openGraph: {
+    title: "Faculty at BRAINAE University",
+    description: "Meet our distinguished faculty members dedicated to quality online education",
+  },
+};
 
 export default function FacultyPage() {
   const departments = [

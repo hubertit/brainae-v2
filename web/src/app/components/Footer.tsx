@@ -1,3 +1,4 @@
+import NewsletterSignup from './NewsletterSignup';
 import Icon, {
   faEnvelope,
   faPhone,
@@ -24,6 +25,10 @@ export default function Footer() {
               around the world to acquire new skills. We deliver high-quality distance learning 
               for working professionals and students.
             </p>
+            <div className="mb-6">
+              <h4 className="text-sm font-semibold text-white mb-3">Newsletter</h4>
+              <NewsletterSignup variant="compact" />
+            </div>
             <div className="flex space-x-4">
               <a
                 href="#"
@@ -123,6 +128,22 @@ export default function Footer() {
                   Accreditations
                 </a>
               </li>
+              <li>
+                <a
+                  href="/verify-certificate"
+                  className="text-gray-400 hover:text-primary transition-colors inline-block"
+                >
+                  Verify Certificate
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/library"
+                  className="text-gray-400 hover:text-primary transition-colors inline-block"
+                >
+                  E-Library
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -152,6 +173,22 @@ export default function Footer() {
                   className="text-gray-400 hover:text-primary transition-colors inline-block"
                 >
                   Apply Now
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/verify-certificate"
+                  className="text-gray-400 hover:text-primary transition-colors inline-block"
+                >
+                  Verify Certificate
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/library"
+                  className="text-gray-400 hover:text-primary transition-colors inline-block"
+                >
+                  E-Library
                 </a>
               </li>
               <li>
@@ -275,19 +312,19 @@ export default function Footer() {
             <p>&copy; {currentYear} BRAINAE University. All rights reserved.</p>
             <div className="flex flex-wrap gap-6">
               <a
-                href="#"
+                href="/privacy-policy"
                 className="hover:text-primary transition-colors"
               >
                 Privacy Policy
               </a>
               <a
-                href="#"
+                href="/terms-of-service"
                 className="hover:text-primary transition-colors"
               >
                 Terms of Service
               </a>
               <a
-                href="#"
+                href="/accessibility"
                 className="hover:text-primary transition-colors"
               >
                 Accessibility

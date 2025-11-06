@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Icon, {
@@ -8,6 +9,15 @@ import Icon, {
   faLightbulb,
   faHandshake,
 } from '../components/Icon';
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description: "Learn about BRAINAE University - our mission, values, history, and commitment to excellence in online education. Discover how we help students and professionals worldwide acquire new skills.",
+  openGraph: {
+    title: "About BRAINAE University",
+    description: "Learn about our mission, values, and commitment to excellence in online education",
+  },
+};
 
 export default function AboutPage() {
   const values = [
@@ -45,6 +55,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      <Breadcrumbs items={[{ label: 'About Us' }]} />
 
       {/* Hero */}
       <section className="bg-primary text-white py-16">

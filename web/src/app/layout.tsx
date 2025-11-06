@@ -3,8 +3,39 @@ import "./globals.css";
 import "./config/fontawesome";
 
 export const metadata: Metadata = {
-  title: "Brainae - Learning Platform",
-  description: "Brainae V2 - Modern Learning Management System",
+  title: {
+    default: "BRAINAE University - Online Education Platform",
+    template: "%s | BRAINAE University",
+  },
+  description: "BRAINAE University is a fully-featured online educational platform that helps students and professionals around the world to acquire new skills. We deliver high-quality distance learning for working professionals and students.",
+  keywords: ["online university", "distance learning", "online education", "degree programs", "professional development", "online courses"],
+  authors: [{ name: "BRAINAE University" }],
+  creator: "BRAINAE University",
+  publisher: "BRAINAE University",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://brainae.org",
+    siteName: "BRAINAE University",
+    title: "BRAINAE University - Online Education Platform",
+    description: "Online education platform that accelerates your career and prepares you to face the future with in-demand skills",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BRAINAE University - Online Education Platform",
+    description: "Online education platform that accelerates your career and prepares you to face the future with in-demand skills",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({

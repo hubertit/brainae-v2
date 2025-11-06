@@ -1,6 +1,8 @@
+import type { Metadata } from 'next';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import PartnersCarousel from './components/PartnersCarousel';
+import NewsletterSignup from './components/NewsletterSignup';
 import Icon, {
   faGraduationCap,
   faBook,
@@ -9,6 +11,16 @@ import Icon, {
   faUsers,
   faArrowRight,
 } from './components/Icon';
+
+export const metadata: Metadata = {
+  title: "Home",
+  description: "Welcome to BRAINAE University - an online education platform that accelerates your career and prepares you to face the future with in-demand skills. Join 2,327+ learners worldwide.",
+  openGraph: {
+    title: "BRAINAE University - Online Education Platform",
+    description: "Online education platform that accelerates your career and prepares you to face the future with in-demand skills",
+    images: ["/images/hero.jpg"],
+  },
+};
 
 export default function Home() {
   return (
@@ -201,6 +213,15 @@ export default function Home() {
 
       {/* Partners Section */}
       <PartnersCarousel />
+
+      {/* Newsletter Section */}
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <NewsletterSignup />
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-16">

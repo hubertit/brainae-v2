@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Icon, {
@@ -8,6 +9,15 @@ import Icon, {
   faGraduationCap,
   faArrowRight,
 } from '../components/Icon';
+
+export const metadata: Metadata = {
+  title: "Admissions",
+  description: "Apply to BRAINAE University. Learn about our admission requirements, application process, deadlines, and how to start your journey towards a brighter future with online education.",
+  openGraph: {
+    title: "Admissions at BRAINAE University",
+    description: "Start your journey at BRAINAE University. Learn about our admission requirements and application process",
+  },
+};
 
 export default function AdmissionsPage() {
   const requirements = [
@@ -28,6 +38,7 @@ export default function AdmissionsPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      <Breadcrumbs items={[{ label: 'Admissions' }]} />
 
       {/* Hero */}
       <section className="bg-primary text-white py-16">

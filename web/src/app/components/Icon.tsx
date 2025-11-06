@@ -94,6 +94,9 @@ export {
   faUsersCog,
   faBookOpen,
   faBuilding,
+  faSpinner,
+  faCircleXmark,
+  faDatabase,
 } from '@fortawesome/free-solid-svg-icons';
 
 // Import for legacy exports

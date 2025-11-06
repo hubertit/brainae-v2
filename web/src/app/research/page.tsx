@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Icon, {
@@ -8,6 +9,15 @@ import Icon, {
   faArrowRight,
   faCalendar,
 } from '../components/Icon';
+
+export const metadata: Metadata = {
+  title: "Research & Publications",
+  description: "Discover research initiatives, publications, and academic contributions from BRAINAE University faculty and students. Explore our research areas and recent publications.",
+  openGraph: {
+    title: "Research & Publications at BRAINAE University",
+    description: "Discover our research initiatives and academic contributions",
+  },
+};
 
 export default function ResearchPage() {
   const researchAreas = [

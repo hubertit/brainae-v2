@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ContactForm from '../components/ContactForm';
@@ -9,6 +10,15 @@ import Icon, {
   faBuilding,
   faUser,
 } from '../components/Icon';
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description: "Get in touch with BRAINAE University. Contact our admissions, financial aid, academic affairs, student services, or technical support teams. We're here to help.",
+  openGraph: {
+    title: "Contact BRAINAE University",
+    description: "Get in touch with us. We're here to help with admissions, financial aid, academics, and more",
+  },
+};
 
 export default function ContactPage() {
   const contactMethods = [
@@ -77,6 +87,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      <Breadcrumbs items={[{ label: 'Contact Us' }]} />
 
       {/* Hero */}
       <section className="bg-primary text-white py-16">

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Icon, {
@@ -14,6 +15,15 @@ import Icon, {
   faBookOpen,
   faChalkboardTeacher,
 } from '../components/Icon';
+
+export const metadata: Metadata = {
+  title: "Academic Programs",
+  description: "Explore BRAINAE University's academic programs across 6 schools: Business & Economics, Health Science, Science & Technology, Social Science, Bible Studies, and Education. Undergraduate, graduate, and professional development programs available.",
+  openGraph: {
+    title: "Academic Programs at BRAINAE University",
+    description: "Explore our comprehensive range of academic programs across multiple schools and disciplines",
+  },
+};
 
 export default function ProgramsPage() {
   const schools = [
@@ -142,6 +152,7 @@ export default function ProgramsPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      <Breadcrumbs items={[{ label: 'Programs' }]} />
 
       {/* Hero */}
       <section className="bg-primary text-white py-16">

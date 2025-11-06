@@ -1,6 +1,17 @@
+import type { Metadata } from 'next';
+import Image from 'next/image';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Icon, { faCertificate, faAward, faCheckCircle } from '../components/Icon';
+import Icon, { faCertificate, faAward, faCheckCircle, faArrowRight } from '../components/Icon';
+
+export const metadata: Metadata = {
+  title: "Accreditations & Recognitions",
+  description: "BRAINAE University is accredited by multiple international accreditation bodies including QAHE, ECHEA, IADL, IATA, ASIC, and IAO. Learn about our accreditations and quality assurance.",
+  openGraph: {
+    title: "Accreditations & Recognitions at BRAINAE University",
+    description: "Learn about our international accreditations and quality assurance standards",
+  },
+};
 
 export default function AccreditationsPage() {
   const accreditations = [
@@ -122,11 +133,15 @@ export default function AccreditationsPage() {
                   key={index}
                   className="bg-white border border-gray-200 p-6 hover:border-primary transition-colors"
                 >
-                  <div className="mb-4 flex items-center justify-center h-32 bg-gray-50 rounded">
-                    <img
+                  <div className="mb-4 flex items-center justify-center h-32 bg-gray-50 rounded relative">
+                    <Image
                       src={accreditation.imageUrl}
                       alt={accreditation.title}
-                      className="max-h-full max-w-full object-contain"
+                      width={200}
+                      height={128}
+                      className="object-contain"
+                      style={{ maxHeight: '100%', maxWidth: '100%' }}
+                      unoptimized={accreditation.imageUrl.startsWith('http')}
                     />
                   </div>
                   <div className="mb-3">

@@ -40,6 +40,12 @@ export default function Header() {
             <a href="/accreditations" className="text-gray-700 hover:text-primary transition-colors">
               Accreditations
             </a>
+            <a href="/verify-certificate" className="text-gray-700 hover:text-primary transition-colors">
+              Verify Certificate
+            </a>
+            <a href="/library" className="text-gray-700 hover:text-primary transition-colors">
+              E-Library
+            </a>
             <a href="/contact" className="text-gray-700 hover:text-primary transition-colors">
               Contact
             </a>
@@ -113,6 +119,20 @@ export default function Header() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Accreditations
+              </a>
+              <a
+                href="/verify-certificate"
+                className="text-gray-700 hover:text-primary transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Verify Certificate
+              </a>
+              <a
+                href="/library"
+                className="text-gray-700 hover:text-primary transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                E-Library
               </a>
               <a
                 href="/contact"
