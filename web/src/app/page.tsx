@@ -20,9 +20,9 @@ import Icon, {
 
 export const metadata: Metadata = {
   title: "Home",
-  description: "Welcome to BRAINAE University - an online education platform that accelerates your career and prepares you to face the future with in-demand skills. Join 2,327+ learners worldwide.",
+  description: "Welcome to Brainae University - an online education platform that accelerates your career and prepares you to face the future with in-demand skills. Join 2,327+ learners worldwide.",
   openGraph: {
-    title: "BRAINAE University - Online Education Platform",
+    title: "Brainae University - Online Education Platform",
     description: "Online education platform that accelerates your career and prepares you to face the future with in-demand skills",
     images: ["/images/hero.jpg"],
   },
@@ -50,7 +50,7 @@ export default function Home() {
         <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 leading-tight px-4">
-              Welcome to BRAINAE University
+              Welcome to Brainae University
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 text-white/95 leading-relaxed px-4">
               Online education platform that accelerates your career and prepares you to face the future with in-demand skills
@@ -88,7 +88,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">About Us</h2>
             <p className="text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
-              BRAINAE University is a fully-featured online educational platform that helps students 
+              Brainae University is a fully-featured online educational platform that helps students 
               and professionals around the world to acquire new skills. We're at the forefront of 
               delivering high-quality distance learning for working professionals and students who 
               want to obtain academic degrees, professional certificates, or learn in-demand new skills.
@@ -150,7 +150,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Learn with BRAINAE University</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Learn with Brainae University</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Build better skills fast right here. We're at the forefront of delivering high-quality distance learning for working professionals and students.
               </p>
@@ -210,7 +210,7 @@ export default function Home() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">How It Works</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Getting started at BRAINAE University is easy. Follow these simple steps to begin your educational journey.
+                Getting started at Brainae University is easy. Follow these simple steps to begin your educational journey.
               </p>
             </div>
             <div className="grid md:grid-cols-4 gap-6">
@@ -265,7 +265,7 @@ export default function Home() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">This Platform is Helping Many Types of Organizations</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                BRAINAE University provides tailored solutions for different sectors, helping organizations achieve their goals through quality education.
+                Brainae University provides tailored solutions for different sectors, helping organizations achieve their goals through quality education.
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
@@ -337,7 +337,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* BRAINAE Journal Section */}
+      {/* Brainae Journal Section */}
       <section className="bg-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -346,7 +346,7 @@ export default function Home() {
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <Icon icon={faNewspaper} className="text-primary" size="2x" />
-                    <h2 className="text-3xl font-bold text-gray-900">BRAINAE Journal</h2>
+                    <h2 className="text-3xl font-bold text-gray-900">Brainae Journal</h2>
                   </div>
                   <p className="text-lg text-gray-700 mb-4">
                     Do you have an article to publish? You can Publish Now, it takes very short time!!
@@ -435,7 +435,7 @@ export default function Home() {
               <div className="order-1 md:order-2">
                 <div className="flex items-center gap-3 mb-4">
                   <Icon icon={faCertificate} className="text-primary" size="2x" />
-                  <h2 className="text-3xl font-bold text-gray-900">BRAINAE Institute of Professional Studies</h2>
+                  <h2 className="text-3xl font-bold text-gray-900">Brainae Institute of Professional Studies</h2>
                 </div>
                 <p className="text-lg text-gray-700 mb-4">
                   Do you know that you can become a Professional Expert in a number of professional courses online?
@@ -444,7 +444,7 @@ export default function Home() {
                   Choose to gain a competitive advantage and excel in your career and achieve exponential growth. It takes a while and is easy.
                 </p>
                 <p className="text-gray-600 mb-6">
-                  BRAINAE Institute of Professional Studies competency focuses exclusively on <strong>in-demand digital technology</strong> skills.
+                  Brainae Institute of Professional Studies competency focuses exclusively on <strong>in-demand digital technology</strong> skills.
                 </p>
                 <a
                   href="/professional"
@@ -488,30 +488,30 @@ export default function Home() {
             <div className="text-center mb-12 sm:mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">What Our Learners Are Saying</h2>
               <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
-                8+ million people are already learning on BRAINAE University. Here's what they have to say about their experience.
+                8+ million people are already learning on Brainae University. Here's what they have to say about their experience.
               </p>
             </div>
             <TestimonialsCarousel
               testimonials={[
                 {
                   name: 'Honorine Ugubwaneza',
-                  quote: 'Great experience from BRAINAE. You get a lot of opportunities. Work hard to get it. Be prepared for everything. Maintain your attendance.',
+                  quote: 'Great experience from Brainae. You get a lot of opportunities. Work hard to get it. Be prepared for everything. Maintain your attendance.',
                 },
                 {
                   name: 'John Hagenimana',
-                  quote: 'BRAINAE University is a place where you can find an amalgamation of learning. I feel great studying at BRAINAE University as it gives great opportunities as well as support from faculties and placement officers.',
+                  quote: 'Brainae University is a place where you can find an amalgamation of learning. I feel great studying at Brainae University as it gives great opportunities as well as support from faculties and placement officers.',
                 },
                 {
                   name: 'Gideon Maniriho',
-                  quote: 'BRAINAE University and SET faculties have put in all the efforts to groom us and make us corporate professionals. It was a wonderful experience at BRAINAE University.',
+                  quote: 'Brainae University and SET faculties have put in all the efforts to groom us and make us corporate professionals. It was a wonderful experience at Brainae University.',
                 },
                 {
                   name: 'Lauryn Bansal',
-                  quote: 'I am a student at BRAINAE, majoring in Masters of Finance. I was amazingly surprised by the warmth and care of the administration and faculty members. I enjoyed every class.',
+                  quote: 'I am a student at Brainae, majoring in Masters of Finance. I was amazingly surprised by the warmth and care of the administration and faculty members. I enjoyed every class.',
                 },
                 {
                   name: 'Sharma ATRASH',
-                  quote: 'I have been a student in the School of Management for over two years now, and I can tell you that no other school can prepare you for a successful career the way that BRAINAE can.',
+                  quote: 'I have been a student in the School of Management for over two years now, and I can tell you that no other school can prepare you for a successful career the way that Brainae can.',
                 },
                 {
                   name: 'Joshi MENDA',
@@ -534,7 +534,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Start Your Journey?</h2>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-              Join more than 2,327 learners worldwide who are advancing their careers with BRAINAE University.
+              Join more than 2,327 learners worldwide who are advancing their careers with Brainae University.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

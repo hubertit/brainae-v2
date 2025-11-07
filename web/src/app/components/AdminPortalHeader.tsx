@@ -38,7 +38,7 @@ export default function AdminPortalHeader({
             <a href="/admin/dashboard" className="flex items-center gap-2">
               <Image
                 src="/icon.png"
-                alt="BRAINAE University"
+                alt="Brainae University"
                 width={64}
                 height={64}
                 className="w-8 h-8 rounded-full border border-gray-300"

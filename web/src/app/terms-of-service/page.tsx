@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "BRAINAE University's Terms of Service. Understand your rights and responsibilities as a student using our online educational platform.",
+  description: "Brainae University's Terms of Service. Understand your rights and responsibilities as a student using our online educational platform.",
   robots: {
     index: false,
     follow: true,
@@ -39,7 +39,7 @@ export default function TermsOfServicePage() {
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Acceptance of Terms</h2>
                   <p className="mb-4">
-                    By accessing and using BRAINAE University's online learning platform, website, and services, you accept and agree to be bound by these Terms of Service. If you do not agree to these terms, you must not use our services.
+                    By accessing and using Brainae University's online learning platform, website, and services, you accept and agree to be bound by these Terms of Service. If you do not agree to these terms, you must not use our services.
                   </p>
                   <p>
                     These terms apply to all users, including students, faculty, staff, and visitors to our online platform. As an online-only university, all interactions and services occur through our digital platform.
@@ -49,7 +49,7 @@ export default function TermsOfServicePage() {
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Description of Services</h2>
                   <p className="mb-4">
-                    BRAINAE University provides online educational services, including but not limited to:
+                    Brainae University provides online educational services, including but not limited to:
                   </p>
                   <ul className="list-disc pl-6 space-y-2 mb-4">
                     <li>Online degree programs, certificates, and courses</li>
@@ -68,7 +68,7 @@ export default function TermsOfServicePage() {
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">3. Enrollment and Academic Policies</h2>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">3.1 Admission and Enrollment</h3>
                   <p className="mb-4">
-                    Admission to BRAINAE University is subject to meeting our academic requirements and completing the application process. Enrollment in courses is subject to availability and prerequisite requirements.
+                    Admission to Brainae University is subject to meeting our academic requirements and completing the application process. Enrollment in courses is subject to availability and prerequisite requirements.
                   </p>
 
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">3.2 Academic Integrity</h3>
@@ -115,7 +115,7 @@ export default function TermsOfServicePage() {
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Intellectual Property</h2>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">5.1 University Content</h3>
                   <p className="mb-4">
-                    All course materials, lectures, assignments, and other content provided through our platform are the property of BRAINAE University or its licensors and are protected by copyright and other intellectual property laws. You may not reproduce, distribute, or create derivative works without authorization.
+                    All course materials, lectures, assignments, and other content provided through our platform are the property of Brainae University or its licensors and are protected by copyright and other intellectual property laws. You may not reproduce, distribute, or create derivative works without authorization.
                   </p>
 
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">5.2 Student Work</h3>
@@ -164,7 +164,7 @@ export default function TermsOfServicePage() {
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">9. Limitation of Liability</h2>
                   <p className="mb-4">
-                    To the maximum extent permitted by law, BRAINAE University shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of data, profits, or business opportunities, arising from your use of our services.
+                    To the maximum extent permitted by law, Brainae University shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of data, profits, or business opportunities, arising from your use of our services.
                   </p>
                   <p>
                     Our total liability for any claims related to our services shall not exceed the amount you paid for the specific course or service giving rise to the claim.
@@ -201,7 +201,7 @@ export default function TermsOfServicePage() {
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">13. Governing Law and Dispute Resolution</h2>
                   <p className="mb-4">
-                    These Terms of Service are governed by the laws of the jurisdiction in which BRAINAE University operates. Any disputes arising from these terms or your use of our services shall be resolved through binding arbitration or in the appropriate courts.
+                    These Terms of Service are governed by the laws of the jurisdiction in which Brainae University operates. Any disputes arising from these terms or your use of our services shall be resolved through binding arbitration or in the appropriate courts.
                   </p>
                 </div>
 
@@ -211,7 +211,7 @@ export default function TermsOfServicePage() {
                     If you have questions about these Terms of Service, please contact us:
                   </p>
                   <div className="bg-gray-50 p-6 rounded-lg">
-                    <p className="mb-2"><strong>BRAINAE University</strong></p>
+                    <p className="mb-2"><strong>Brainae University</strong></p>
                     <p className="mb-2">Email: <a href="mailto:legal@brainae.edu" className="text-primary hover:underline">legal@brainae.edu</a></p>
                     <p className="mb-2">Phone: <a href="tel:+15551234567" className="text-primary hover:underline">+1 (555) 123-4567</a></p>
                     <p>Address: 123 University Avenue, City, Country 12345</p>

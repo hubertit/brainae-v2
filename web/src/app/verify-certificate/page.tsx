@@ -4,8 +4,8 @@ import CertificateVerificationForm from '../components/CertificateVerificationFo
 import Icon, { faCertificate, faFileAlt, faCheckCircle, faEnvelope } from '../components/Icon';
 
 export const metadata = {
-  title: 'Verify Certificate | BRAINAE University',
-  description: 'Verify the authenticity of certificates, degrees, transcripts, and admission letters issued by BRAINAE University. Enter your document ID to validate.',
+  title: 'Verify Certificate | Brainae University',
+  description: 'Verify the authenticity of certificates, degrees, transcripts, and admission letters issued by Brainae University. Enter your document ID to validate.',
 };
 
 export default function VerifyCertificatePage() {
@@ -45,7 +45,7 @@ export default function VerifyCertificatePage() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4">Certificate Verification</h1>
           <p className="text-xl text-primary-100">
-            Verify the authenticity of documents issued by BRAINAE University
+            Verify the authenticity of documents issued by Brainae University
           </p>
         </div>
       </section>

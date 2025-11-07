@@ -10,8 +10,8 @@ import Icon, {
 } from '../components/Icon';
 
 export const metadata = {
-  title: 'E-Library | BRAINAE University',
-  description: 'Access BRAINAE University\'s extensive online library resources, research databases, e-books, journals, and academic materials for students and faculty.',
+  title: 'E-Library | Brainae University',
+  description: 'Access Brainae University\'s extensive online library resources, research databases, e-books, journals, and academic materials for students and faculty.',
 };
 
 export default function LibraryPage() {
@@ -83,7 +83,7 @@ export default function LibraryPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Welcome to BRAINAE University E-Library</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Welcome to Brainae University E-Library</h2>
             <p className="text-lg text-gray-700 mb-8">
               Our online library provides students and faculty with 24/7 access to a vast collection of digital resources,
               including e-books, academic journals, research databases, and multimedia content. As an online-only university,

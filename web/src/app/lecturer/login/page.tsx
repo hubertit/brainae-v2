@@ -5,7 +5,7 @@ import LecturerLogin from '../../components/LecturerLogin';
 
 export const metadata: Metadata = {
   title: "Lecturer Portal - Login",
-  description: "Lecturer login portal for BRAINAE University",
+  description: "Lecturer login portal for Brainae University",
   robots: {
     index: false,
     follow: false,

@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "BRAINAE University's Privacy Policy. Learn how we collect, use, and protect your personal information when you use our online educational platform.",
+  description: "Brainae University's Privacy Policy. Learn how we collect, use, and protect your personal information when you use our online educational platform.",
   robots: {
     index: false,
     follow: true,
@@ -39,7 +39,7 @@ export default function PrivacyPolicyPage() {
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Introduction</h2>
                   <p className="mb-4">
-                    BRAINAE University ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our online learning platform and use our services.
+                    Brainae University ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our online learning platform and use our services.
                   </p>
                   <p>
                     As an online-only university, we understand the importance of data privacy and security in digital education. This policy applies to all information collected through our website, learning management system, and related services.
@@ -167,7 +167,7 @@ export default function PrivacyPolicyPage() {
                     If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:
                   </p>
                   <div className="bg-gray-50 p-6 rounded-lg">
-                    <p className="mb-2"><strong>BRAINAE University</strong></p>
+                    <p className="mb-2"><strong>Brainae University</strong></p>
                     <p className="mb-2">Email: <a href="mailto:privacy@brainae.edu" className="text-primary hover:underline">privacy@brainae.edu</a></p>
                     <p className="mb-2">Phone: <a href="tel:+15551234567" className="text-primary hover:underline">+1 (555) 123-4567</a></p>
                     <p>Address: 123 University Avenue, City, Country 12345</p>

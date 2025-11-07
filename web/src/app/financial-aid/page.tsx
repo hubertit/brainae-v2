@@ -12,9 +12,9 @@ import Icon, {
 
 export const metadata: Metadata = {
   title: "Financial Aid & Scholarships",
-  description: "Explore financial aid options and scholarships at BRAINAE University. Learn about available grants, scholarships, payment plans, and how to apply for financial assistance.",
+  description: "Explore financial aid options and scholarships at Brainae University. Learn about available grants, scholarships, payment plans, and how to apply for financial assistance.",
   openGraph: {
-    title: "Financial Aid & Scholarships at BRAINAE University",
+    title: "Financial Aid & Scholarships at Brainae University",
     description: "Explore financial aid options and scholarships to make your education affordable",
   },
 };

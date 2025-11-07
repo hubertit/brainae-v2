@@ -19,7 +19,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* About */}
           <div className="min-w-0">
-            <h3 className="text-xl font-bold mb-4 text-white">BRAINAE University</h3>
+            <h3 className="text-xl font-bold mb-4 text-white">Brainae University</h3>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               A fully-featured online educational platform that helps students and professionals 
               around the world to acquire new skills through high-quality distance learning.
@@ -290,7 +290,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-            <p>&copy; {currentYear} BRAINAE University. All rights reserved.</p>
+            <p>&copy; {currentYear} Brainae University. All rights reserved.</p>
             <div className="flex flex-wrap gap-6 justify-center md:justify-end">
               <a
                 href="/privacy-policy"

@@ -12,9 +12,9 @@ import Icon, {
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Learn about BRAINAE University - our mission, values, history, and commitment to excellence in online education. Discover how we help students and professionals worldwide acquire new skills.",
+  description: "Learn about Brainae University - our mission, values, history, and commitment to excellence in online education. Discover how we help students and professionals worldwide acquire new skills.",
   openGraph: {
-    title: "About BRAINAE University",
+    title: "About Brainae University",
     description: "Learn about our mission, values, and commitment to excellence in online education",
   },
 };
@@ -73,13 +73,13 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Our Mission</h2>
             <div className="bg-gray-50 border border-gray-200 p-8">
               <p className="text-lg text-gray-700 mb-4">
-                BRAINAE University is a fully-featured online educational platform that helps students 
+                Brainae University is a fully-featured online educational platform that helps students 
                 and professionals around the world to acquire new skills. We're at the forefront of 
                 delivering high-quality distance learning for working professionals and students who 
                 want to obtain academic degrees, professional certificates, or learn in-demand new skills.
               </p>
               <p className="text-lg text-gray-700">
-                The BRAINAE University program offers a hands-on approach to both business and community 
+                The Brainae University program offers a hands-on approach to both business and community 
                 leadership, as part of a cutting-edge and stimulating educational experience. We build 
                 better skills fast, helping you face the future with confidence.
               </p>
@@ -130,7 +130,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Our History</h2>
             <div className="bg-white border border-gray-200 p-8">
               <p className="text-gray-700 mb-4">
-                BRAINAE University has established itself as a leading online educational platform, 
+                Brainae University has established itself as a leading online educational platform, 
                 serving thousands of learners worldwide. Our journey has been marked by innovation 
                 in distance learning and a commitment to making quality education accessible to all.
               </p>

@@ -137,7 +137,7 @@ export default function CertificateVerificationForm() {
                 </div>
                 <div className="mt-4 pt-4 border-t border-green-200">
                   <p className="text-sm text-green-800">
-                    ✓ This document has been verified and is authentic. It was issued by BRAINAE University.
+                    ✓ This document has been verified and is authentic. It was issued by Brainae University.
                   </p>
                 </div>
               </div>
@@ -159,7 +159,7 @@ export default function CertificateVerificationForm() {
                 <ul className="list-disc list-inside mt-2 space-y-1">
                   <li>The document ID is entered correctly</li>
                   <li>The document type matches your selection</li>
-                  <li>The document was issued by BRAINAE University</li>
+                  <li>The document was issued by Brainae University</li>
                 </ul>
               </div>
             </div>

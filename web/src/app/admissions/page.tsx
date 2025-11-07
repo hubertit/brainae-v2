@@ -12,10 +12,10 @@ import Icon, {
 
 export const metadata: Metadata = {
   title: "Admissions",
-  description: "Apply to BRAINAE University. Learn about our admission requirements, application process, deadlines, and how to start your journey towards a brighter future with online education.",
+  description: "Apply to Brainae University. Learn about our admission requirements, application process, deadlines, and how to start your journey towards a brighter future with online education.",
   openGraph: {
-    title: "Admissions at BRAINAE University",
-    description: "Start your journey at BRAINAE University. Learn about our admission requirements and application process",
+    title: "Admissions at Brainae University",
+    description: "Start your journey at Brainae University. Learn about our admission requirements and application process",
   },
 };
 

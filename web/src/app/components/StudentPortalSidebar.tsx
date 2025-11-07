@@ -99,7 +99,7 @@ export default function StudentPortalSidebar({ isOpen, onClose }: StudentPortalS
           <div className={`flex items-center ${collapsed ? 'justify-center' : 'gap-2'}`}>
             <Image
               src="/icon.png"
-              alt="BRAINAE University"
+              alt="Brainae University"
               width={64}
               height={64}
               className="w-10 h-10 flex-shrink-0 rounded-full border border-gray-300"

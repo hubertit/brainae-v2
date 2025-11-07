@@ -13,9 +13,9 @@ import Icon, {
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Get in touch with BRAINAE University. Contact our admissions, financial aid, academic affairs, student services, or technical support teams. We're here to help.",
+  description: "Get in touch with Brainae University. Contact our admissions, financial aid, academic affairs, student services, or technical support teams. We're here to help.",
   openGraph: {
-    title: "Contact BRAINAE University",
+    title: "Contact Brainae University",
     description: "Get in touch with us. We're here to help with admissions, financial aid, academics, and more",
   },
 };

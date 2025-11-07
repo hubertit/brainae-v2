@@ -5,9 +5,9 @@ import Icon, { faUsers, faCog, faLaptopCode } from '../components/Icon';
 
 export const metadata: Metadata = {
   title: "Accessibility Statement",
-  description: "BRAINAE University's commitment to digital accessibility. Learn about our accessibility features, accommodations, and how we ensure an inclusive learning environment for all students.",
+  description: "Brainae University's commitment to digital accessibility. Learn about our accessibility features, accommodations, and how we ensure an inclusive learning environment for all students.",
   openGraph: {
-    title: "Accessibility Statement - BRAINAE University",
+    title: "Accessibility Statement - Brainae University",
     description: "Our commitment to providing an inclusive learning environment for all",
   },
 };
@@ -40,7 +40,7 @@ export default function AccessibilityPage() {
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Commitment</h2>
                   <p className="mb-4">
-                    BRAINAE University is committed to ensuring that our online learning platform and educational services are accessible to all students, including those with disabilities. As an online-only university, we recognize the importance of digital accessibility in providing equal educational opportunities.
+                    Brainae University is committed to ensuring that our online learning platform and educational services are accessible to all students, including those with disabilities. As an online-only university, we recognize the importance of digital accessibility in providing equal educational opportunities.
                   </p>
                   <p>
                     We strive to comply with the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA standards and applicable accessibility laws to ensure our platform is usable by everyone.
@@ -175,7 +175,7 @@ export default function AccessibilityPage() {
                     For questions, concerns, or to request accessibility accommodations:
                   </p>
                   <div className="bg-primary text-white p-6 rounded-lg">
-                    <p className="mb-2"><strong>BRAINAE University</strong></p>
+                    <p className="mb-2"><strong>Brainae University</strong></p>
                     <p className="mb-2">Office of Student Accessibility Services</p>
                     <p className="mb-2">Email: <a href="mailto:accessibility@brainae.edu" className="text-white underline hover:text-gray-200">accessibility@brainae.edu</a></p>
                     <p className="mb-2">Phone: <a href="tel:+15551234567" className="text-white underline hover:text-gray-200">+1 (555) 123-4567</a></p>

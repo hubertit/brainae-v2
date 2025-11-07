@@ -10,9 +10,9 @@ import Icon, {
 
 export const metadata: Metadata = {
   title: "Faculty",
-  description: "Meet the distinguished faculty members of BRAINAE University. Our experienced professors and instructors are dedicated to providing quality online education across all academic disciplines.",
+  description: "Meet the distinguished faculty members of Brainae University. Our experienced professors and instructors are dedicated to providing quality online education across all academic disciplines.",
   openGraph: {
-    title: "Faculty at BRAINAE University",
+    title: "Faculty at Brainae University",
     description: "Meet our distinguished faculty members dedicated to quality online education",
   },
 };

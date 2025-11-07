@@ -87,7 +87,7 @@ export default function ApplicationPage() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4">Application Form</h1>
           <p className="text-xl text-primary-100">
-            Start your journey with BRAINAE University
+            Start your journey with Brainae University
           </p>
         </div>
       </section>

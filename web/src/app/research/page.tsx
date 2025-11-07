@@ -12,9 +12,9 @@ import Icon, {
 
 export const metadata: Metadata = {
   title: "Research & Publications",
-  description: "Discover research initiatives, publications, and academic contributions from BRAINAE University faculty and students. Explore our research areas and recent publications.",
+  description: "Discover research initiatives, publications, and academic contributions from Brainae University faculty and students. Explore our research areas and recent publications.",
   openGraph: {
-    title: "Research & Publications at BRAINAE University",
+    title: "Research & Publications at Brainae University",
     description: "Discover our research initiatives and academic contributions",
   },
 };

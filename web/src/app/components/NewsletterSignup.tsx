@@ -195,7 +195,7 @@ export default function NewsletterSignup({ variant = 'default', className = '' }
         )}
 
         <p className="mt-4 text-xs text-gray-500 text-center">
-          By subscribing, you agree to receive emails from BRAINAE University. You can unsubscribe at any time.
+          By subscribing, you agree to receive emails from Brainae University. You can unsubscribe at any time.
         </p>
       </form>
     </div>

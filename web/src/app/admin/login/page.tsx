@@ -5,7 +5,7 @@ import AdminLogin from '../../components/AdminLogin';
 
 export const metadata: Metadata = {
   title: "Admin Portal - Login",
-  description: "Administrator login portal for BRAINAE University",
+  description: "Administrator login portal for Brainae University",
   robots: {
     index: false,
     follow: false,

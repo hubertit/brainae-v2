@@ -18,9 +18,9 @@ import Icon, {
 
 export const metadata: Metadata = {
   title: "Academic Programs",
-  description: "Explore BRAINAE University's academic programs across 6 schools: Business & Economics, Health Science, Science & Technology, Social Science, Bible Studies, and Education. Undergraduate, graduate, and professional development programs available.",
+  description: "Explore Brainae University's academic programs across 6 schools: Business & Economics, Health Science, Science & Technology, Social Science, Bible Studies, and Education. Undergraduate, graduate, and professional development programs available.",
   openGraph: {
-    title: "Academic Programs at BRAINAE University",
+    title: "Academic Programs at Brainae University",
     description: "Explore our comprehensive range of academic programs across multiple schools and disciplines",
   },
 };
@@ -139,8 +139,8 @@ export default function ProgramsPage() {
 
   const professionalStudies = {
     icon: faCertificate,
-    name: 'BRAINAE Institute of Professional Studies',
-    description: 'BRAINAE Institute of Professional Studies competency focuses exclusively on in-demand digital technology skills. Choose to gain a competitive advantage and excel in your career.',
+    name: 'Brainae Institute of Professional Studies',
+    description: 'Brainae Institute of Professional Studies competency focuses exclusively on in-demand digital technology skills. Choose to gain a competitive advantage and excel in your career.',
     features: [
       'Professional certificates in digital technology',
       'In-demand skills training',
@@ -232,7 +232,7 @@ export default function ProgramsPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Why Learn with BRAINAE University</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Why Learn with Brainae University</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <Icon icon={faGraduationCap} className="text-primary mb-4 mx-auto" size="2x" />
@@ -266,7 +266,7 @@ export default function ProgramsPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Start Your Journey?</h2>
             <p className="text-primary-100 mb-8">
-              Effective learning starts with assessment. Learning a new skill is hard, BRAINAE University makes it simple.
+              Effective learning starts with assessment. Learning a new skill is hard, Brainae University makes it simple.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

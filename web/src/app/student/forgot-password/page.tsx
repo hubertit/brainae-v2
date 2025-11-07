@@ -53,7 +53,7 @@ export default function ForgotPasswordPage() {
               <div className="inline-flex items-center justify-center mb-4">
                 <Image
                   src="/icon.png"
-                  alt="BRAINAE University"
+                  alt="Brainae University"
                   width={128}
                   height={128}
                   className="w-16 h-16 rounded-full border border-gray-300"
