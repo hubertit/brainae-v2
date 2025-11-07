@@ -58,7 +58,7 @@ export default function Header() {
               Contact
             </a>
             <a
-              href="/student"
+              href="/login?role=student"
               className="bg-primary text-white text-sm px-4 py-2 rounded hover:bg-primary-600 transition-colors"
             >
               Student Portal
@@ -143,7 +143,7 @@ export default function Header() {
                 Contact
               </a>
               <a
-                href="/student"
+                href="/login?role=student"
                 className="bg-primary text-white text-sm px-4 py-2 rounded text-center hover:bg-primary-600 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >

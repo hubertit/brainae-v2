@@ -16,13 +16,27 @@ export default function AdminLayout({
   const [adminName, setAdminName] = useState('');
 
   useEffect(() => {
-    const loggedIn = document.cookie.includes('adminLoggedIn=true');
-    if (!loggedIn) {
-      if (pathname !== '/admin/login') {
-        router.push('/admin/login');
+    if (pathname === '/admin/login') {
+      return;
+    }
+
+    try {
+      const authRaw = sessionStorage.getItem('brainaeAuth');
+      if (!authRaw) {
+        router.replace('/login?role=admin');
+        return;
       }
-    } else {
-      setAdminName('Administrator');
+
+      const auth = JSON.parse(authRaw) as { role?: string; name?: string; email?: string } | null;
+      if (!auth || auth.role !== 'admin') {
+        router.replace('/login?role=admin');
+        return;
+      }
+
+      setAdminName(auth.name || auth.email || 'Administrator');
+    } catch (error) {
+      console.error('Failed to read authentication state', error);
+      router.replace('/login?role=admin');
     }
   }, [router, pathname]);
 

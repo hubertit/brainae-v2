@@ -115,6 +115,7 @@ export {
   faCircle,
   faQuestionCircle,
   faStickyNote,
+  faChartLine,
 } from '@fortawesome/free-solid-svg-icons';
 
 // Import for legacy exports

@@ -16,13 +16,27 @@ export default function LecturerLayout({
   const [lecturerName, setLecturerName] = useState('');
 
   useEffect(() => {
-    const loggedIn = document.cookie.includes('lecturerLoggedIn=true');
-    if (!loggedIn) {
-      if (pathname !== '/lecturer/login') {
-        router.push('/lecturer/login');
+    if (pathname === '/lecturer/login') {
+      return;
+    }
+
+    try {
+      const authRaw = sessionStorage.getItem('brainaeAuth');
+      if (!authRaw) {
+        router.replace('/login?role=lecturer');
+        return;
       }
-    } else {
-      setLecturerName('Professor');
+
+      const auth = JSON.parse(authRaw) as { role?: string; name?: string; email?: string } | null;
+      if (!auth || auth.role !== 'lecturer') {
+        router.replace('/login?role=lecturer');
+        return;
+      }
+
+      setLecturerName(auth.name || auth.email || 'Lecturer');
+    } catch (error) {
+      console.error('Failed to read authentication state', error);
+      router.replace('/login?role=lecturer');
     }
   }, [router, pathname]);
 

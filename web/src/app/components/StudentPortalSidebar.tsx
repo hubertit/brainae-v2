@@ -35,16 +35,32 @@ export default function StudentPortalSidebar({ isOpen, onClose }: StudentPortalS
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const name = sessionStorage.getItem('studentName');
-      const email = sessionStorage.getItem('studentEmail');
-      const studentId = sessionStorage.getItem('studentId');
-      
-      if (name || email) {
-        setUserInfo({
-          name: name || 'Student',
-          email: email || '',
-          role: 'Student',
-        });
+      try {
+        const authRaw = sessionStorage.getItem('brainaeAuth');
+        if (authRaw) {
+          const auth = JSON.parse(authRaw) as { name?: string; email?: string; role?: string } | null;
+          if (auth?.role === 'student') {
+            setUserInfo({
+              name: auth.name || 'Student',
+              email: auth.email || '',
+              role: 'Student',
+            });
+            return;
+          }
+        }
+
+        const name = sessionStorage.getItem('studentName');
+        const email = sessionStorage.getItem('studentEmail');
+
+        if (name || email) {
+          setUserInfo({
+            name: name || 'Student',
+            email: email || '',
+            role: 'Student',
+          });
+        }
+      } catch (error) {
+        console.error('Unable to load student info', error);
       }
     }
   }, []);

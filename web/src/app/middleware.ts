@@ -8,7 +8,7 @@ export function middleware(request: NextRequest) {
   if (path.startsWith('/student') && path !== '/student') {
     const isLoggedIn = request.cookies.get('studentLoggedIn')?.value === 'true';
     if (!isLoggedIn) {
-      return NextResponse.redirect(new URL('/student', request.url));
+      return NextResponse.redirect(new URL('/login?role=student', request.url));
     }
   }
   
@@ -16,7 +16,7 @@ export function middleware(request: NextRequest) {
   if (path.startsWith('/admin') && path !== '/admin/login') {
     const isAdmin = request.cookies.get('adminLoggedIn')?.value === 'true';
     if (!isAdmin) {
-      return NextResponse.redirect(new URL('/admin/login', request.url));
+      return NextResponse.redirect(new URL('/login?role=admin', request.url));
     }
   }
   
@@ -24,7 +24,7 @@ export function middleware(request: NextRequest) {
   if (path.startsWith('/lecturer') && path !== '/lecturer/login') {
     const isLecturer = request.cookies.get('lecturerLoggedIn')?.value === 'true';
     if (!isLecturer) {
-      return NextResponse.redirect(new URL('/lecturer/login', request.url));
+      return NextResponse.redirect(new URL('/login?role=lecturer', request.url));
     }
   }
   

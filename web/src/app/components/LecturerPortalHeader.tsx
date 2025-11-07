@@ -19,8 +19,22 @@ export default function LecturerPortalHeader({
   const router = useRouter();
 
   const handleLogout = () => {
+    sessionStorage.removeItem('brainaeAuth');
+    sessionStorage.removeItem('brainaeRole');
+    sessionStorage.removeItem('lecturerName');
+    sessionStorage.removeItem('studentLoggedIn');
+    sessionStorage.removeItem('studentEmail');
+    sessionStorage.removeItem('studentName');
+    sessionStorage.removeItem('studentId');
+    sessionStorage.removeItem('adminName');
+
     document.cookie = 'lecturerLoggedIn=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
-    router.push('/lecturer/login');
+    document.cookie = 'studentLoggedIn=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+    document.cookie = 'adminLoggedIn=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+    document.cookie = 'brainaeRole=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+    document.cookie = 'brainaeLoggedIn=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+
+    router.push('/login?role=lecturer');
   };
 
   return (

@@ -16,17 +16,27 @@ export default function StudentLayout({
   const [studentName, setStudentName] = useState('');
 
   useEffect(() => {
-    // Check authentication
-    const loggedIn = sessionStorage.getItem('studentLoggedIn');
-    const email = sessionStorage.getItem('studentEmail');
-    const name = sessionStorage.getItem('studentName');
+    if (pathname === '/student') {
+      return;
+    }
 
-    if (!loggedIn || !email) {
-      if (pathname !== '/student') {
-        router.push('/student');
+    try {
+      const authRaw = sessionStorage.getItem('brainaeAuth');
+      if (!authRaw) {
+        router.replace('/login?role=student');
+        return;
       }
-    } else {
-      setStudentName(name || email);
+
+      const auth = JSON.parse(authRaw) as { role?: string; name?: string; email?: string } | null;
+      if (!auth || auth.role !== 'student') {
+        router.replace('/login?role=student');
+        return;
+      }
+
+      setStudentName(auth.name || auth.email || 'Student');
+    } catch (error) {
+      console.error('Failed to read authentication state', error);
+      router.replace('/login?role=student');
     }
   }, [router, pathname]);
 

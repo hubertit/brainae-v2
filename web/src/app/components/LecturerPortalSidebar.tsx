@@ -28,11 +28,30 @@ export default function LecturerPortalSidebar({ isOpen, onClose }: LecturerPorta
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setUserInfo({
-        name: 'Professor',
-        email: 'lecturer@brainae.edu',
-        role: 'Lecturer',
-      });
+      try {
+        const authRaw = sessionStorage.getItem('brainaeAuth');
+        if (authRaw) {
+          const auth = JSON.parse(authRaw) as { role?: string; name?: string; email?: string } | null;
+          if (auth?.role === 'lecturer') {
+            setUserInfo({
+              name: auth.name || 'Lecturer',
+              email: auth.email || '',
+              role: 'Lecturer',
+            });
+            return;
+          }
+        }
+
+        const fallbackName = sessionStorage.getItem('lecturerName');
+        if (fallbackName) {
+          setUserInfo({ name: fallbackName, email: 'lecturer@brainae.edu', role: 'Lecturer' });
+        } else {
+          setUserInfo({ name: 'Lecturer', email: 'lecturer@brainae.edu', role: 'Lecturer' });
+        }
+      } catch (error) {
+        console.error('Unable to load lecturer info', error);
+        setUserInfo({ name: 'Lecturer', email: 'lecturer@brainae.edu', role: 'Lecturer' });
+      }
     }
   }, []);
 

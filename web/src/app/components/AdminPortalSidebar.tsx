@@ -29,12 +29,30 @@ export default function AdminPortalSidebar({ isOpen, onClose }: AdminPortalSideb
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      // Get admin info from cookies or session
-      setUserInfo({
-        name: 'Administrator',
-        email: 'admin@brainae.edu',
-        role: 'Admin',
-      });
+      try {
+        const authRaw = sessionStorage.getItem('brainaeAuth');
+        if (authRaw) {
+          const auth = JSON.parse(authRaw) as { role?: string; name?: string; email?: string } | null;
+          if (auth?.role === 'admin') {
+            setUserInfo({
+              name: auth.name || 'Administrator',
+              email: auth.email || '',
+              role: 'Admin',
+            });
+            return;
+          }
+        }
+
+        const fallbackName = sessionStorage.getItem('adminName');
+        if (fallbackName) {
+          setUserInfo({ name: fallbackName, email: 'admin@brainae.edu', role: 'Admin' });
+        } else {
+          setUserInfo({ name: 'Administrator', email: 'admin@brainae.edu', role: 'Admin' });
+        }
+      } catch (error) {
+        console.error('Unable to load admin info', error);
+        setUserInfo({ name: 'Administrator', email: 'admin@brainae.edu', role: 'Admin' });
+      }
     }
   }, []);
 
